@@ -4,7 +4,8 @@
 #include <QWidget>
 #include <QStackedWidget>
 #include <QPushButton>
-#include <mainmenu.h>
+#include "settings.h"
+#include "mainmenu.h"
 
 class MainWindow : public QWidget
 {
@@ -16,6 +17,7 @@ public:
 
 private:
     QStackedWidget stacked_widget_;
-    MainMenu main_menu_;
+    MainMenu * main_menu_;
+    Settings * settings_;
 };
 #endif // MAINWINDOW_H

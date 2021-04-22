@@ -2,7 +2,6 @@
 #define MAINMENU_H
 
 #include <QWidget>
-#include <QPushButton>
 #include <QVBoxLayout>
 
 class MainMenu : public QWidget
