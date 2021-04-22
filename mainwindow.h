@@ -3,8 +3,8 @@
 
 #include <QWidget>
 #include <QStackedWidget>
-#include <QVBoxLayout>
-#include <QHBoxLayout>
+#include <QPushButton>
+#include <mainmenu.h>
 
 class MainWindow : public QWidget
 {
@@ -15,9 +15,7 @@ public:
     ~MainWindow();
 
 private:
-    QVBoxLayout vertical_layout;
-    QHBoxLayout up_horizontal_layout;
-    QHBoxLayout down_horizontal_layout;
-    QStackedWidget stacked_widget;
+    QStackedWidget stacked_widget_;
+    MainMenu main_menu_;
 };
 #endif // MAINWINDOW_H
