@@ -9,6 +9,11 @@ MainWindow::MainWindow(QWidget *parent)
     stacked_widget_.setCurrentIndex(0);
     stacked_widget_.show();
     setLayout(stacked_widget_.layout());
+
+    auto close=[&](){
+       this->close();
+    };
+    connect(&main_menu_, &MainMenu::GoToExit, close);
 }
 
 MainWindow::~MainWindow()

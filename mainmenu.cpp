@@ -25,5 +25,6 @@ MainMenu::MainMenu(QWidget *parent) : QWidget(parent), layout_(this)
     layout_.setSpacing(40);
     layout_.setContentsMargins(250, 200, 250, 200);
     setLayout(&layout_);
+    connect(but_exit_, &QPushButton::clicked, this, &MainMenu::GoToExit);
 
 }
