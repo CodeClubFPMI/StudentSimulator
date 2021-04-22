@@ -15,13 +15,8 @@ MainWindow::MainWindow(QWidget *parent)
     //stacked_widget_.setCurrentIndex(2);
     stacked_widget_.addWidget(statistic_);
     stacked_widget_.addWidget(settings_);
-<<<<<<< HEAD
 
     stacked_widget_.setCurrentIndex(1); // just for test
-=======
-    stacked_widget_.setCurrentIndex(1); // just for test
-    stacked_widget_.setCurrentIndex(1);
->>>>>>> aa14f3b808fa9c83835361a7e337a197eff17648
     stacked_widget_.show();
     setLayout(stacked_widget_.layout());
 
