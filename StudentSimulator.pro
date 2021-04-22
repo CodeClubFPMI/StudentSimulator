@@ -14,21 +14,16 @@ SOURCES += \
     mainmenu.cpp \
     mainwindow.cpp \
     settings.cpp \
-<<<<<<< HEAD
-    student.cpp
-=======
+    student.cpp \
     statistic.cpp
->>>>>>> a264ce73a39bb013b6ba68f097c55e39386ac5aa
 
 HEADERS += \
     mainmenu.h \
     mainwindow.h \
     settings.h \
-<<<<<<< HEAD
+    statistic.h \
     student.h
-=======
-    statistic.h
->>>>>>> a264ce73a39bb013b6ba68f097c55e39386ac5aa
+
 
 FORMS +=
 
