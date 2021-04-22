@@ -12,12 +12,14 @@ SOURCES += \
     main.cpp \
     mainmenu.cpp \
     mainwindow.cpp \
-    settings.cpp
+    settings.cpp \
+    student.cpp
 
 HEADERS += \
     mainmenu.h \
     mainwindow.h \
-    settings.h
+    settings.h \
+    student.h
 
 FORMS +=
 

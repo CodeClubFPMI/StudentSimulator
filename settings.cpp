@@ -11,6 +11,7 @@ Settings::Settings(QWidget *parent) : QWidget(parent)
     but_sound_->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
     but_back_->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
 
+    // TODO: make buttons dimensions better
     layout_.addWidget(but_music_, 1);
     layout_.addWidget(but_sound_, 1);
     layout_.addWidget(but_back_, 1);
