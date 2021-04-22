@@ -11,7 +11,7 @@ public:
     explicit MainMenu(QWidget *parent = nullptr);
 
 signals:
-
+   void GoToExit();
 private:
     QVBoxLayout layout_;
 };
