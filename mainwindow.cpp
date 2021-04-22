@@ -8,18 +8,26 @@ MainWindow::MainWindow(QWidget *parent)
 
     main_menu_ = new MainMenu;
     settings_ = new Settings;
+    statistic_ = new Statistic;
 
     resize(800, 790);
     stacked_widget_.addWidget(main_menu_);
-    //stacked_widget_.setCurrentIndex(0);
+    //stacked_widget_.setCurrentIndex(2);
+    stacked_widget_.addWidget(statistic_);
     stacked_widget_.addWidget(settings_);
+<<<<<<< HEAD
     stacked_widget_.setCurrentIndex(1); // just for test
+=======
+    stacked_widget_.setCurrentIndex(1);
+>>>>>>> a264ce73a39bb013b6ba68f097c55e39386ac5aa
     stacked_widget_.show();
     setLayout(stacked_widget_.layout());
 
+    //lambda for close game
     auto close=[&](){
        this->close();
     };
+    //closing game
     connect(main_menu_, &MainMenu::GoToExit, close);
 
 }

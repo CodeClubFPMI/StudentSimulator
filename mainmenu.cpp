@@ -26,6 +26,7 @@ MainMenu::MainMenu(QWidget *parent) : QWidget(parent), layout_(this)
     layout_.setContentsMargins(250, 200, 250, 200);
     setLayout(&layout_);
 
+    //send signal from menu to main window
     connect(but_exit_, &QPushButton::clicked, this, &MainMenu::GoToExit);
 
 }
