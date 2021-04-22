@@ -3,6 +3,7 @@
 
 MainMenu::MainMenu(QWidget *parent) : QWidget(parent), layout_(this)
 {
+    // adding menu buttons
     QPushButton * but_new_game_ = new QPushButton("New Game", this);
     QPushButton * but_load_game_ = new QPushButton("Load Game", this);
     QPushButton * but_statisic_ = new QPushButton("Statistic", this);
