@@ -12,6 +12,8 @@ public:
 
 signals:
    void GoToExit();
+   void GoToSettings();
+   void GoToStatistic();
 private:
     QVBoxLayout layout_;
 };

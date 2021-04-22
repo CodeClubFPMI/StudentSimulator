@@ -19,4 +19,6 @@ Settings::Settings(QWidget *parent) : QWidget(parent)
     layout_.setSpacing(100);
     layout_.setContentsMargins(250, 200, 250, 200);
     setLayout(&layout_);
+
+    connect(but_back_, &QPushButton::clicked, this, &Settings::GoToMainMenu);
 }

@@ -16,7 +16,7 @@ MainWindow::MainWindow(QWidget *parent)
     stacked_widget_.addWidget(statistic_);
     stacked_widget_.addWidget(settings_);
 
-    stacked_widget_.setCurrentIndex(1); // just for test
+    stacked_widget_.setCurrentIndex(0); // just for test
     stacked_widget_.show();
     setLayout(stacked_widget_.layout());
 
@@ -24,8 +24,36 @@ MainWindow::MainWindow(QWidget *parent)
     auto close=[&](){
        this->close();
     };
+
+    //lamda for choose main menu
+    auto choose_main_menu=[&](){
+      stacked_widget_.setCurrentIndex(0);
+    };
+
+    //lamda for choose statistic menu
+    auto choose_statistic=[&](){
+      stacked_widget_.setCurrentIndex(1);
+    };
+
+
+    //lamda for choose settings menu
+    auto choose_settings=[&](){
+      stacked_widget_.setCurrentIndex(2);
+    };
+
     //closing game
     connect(main_menu_, &MainMenu::GoToExit, close);
+
+    //back to main menu
+    connect(settings_, &Settings::GoToMainMenu, choose_main_menu);
+    connect(statistic_, &Statistic::GoToMainMenu, choose_main_menu);
+
+    //choose settings menu
+    connect(main_menu_, &MainMenu::GoToStatistic, choose_statistic);
+
+    //choose settings menu
+    connect(main_menu_, &MainMenu::GoToSettings, choose_settings );
+
 
 }
 

@@ -12,6 +12,7 @@ Statistic::Statistic(QWidget *parent) : QWidget(parent), layout_(this)
     QFile file(file_path);
     const int kAmountOfPlaces = 10;
     QLabel *labels_[kAmountOfPlaces + 1];
+    QPushButton * but_back_ = new QPushButton("Back", this);
 
     //    if ((file.exists())&&(file.open(QIODevice::ReadOnly))){
     //        QString str="";
@@ -26,7 +27,7 @@ Statistic::Statistic(QWidget *parent) : QWidget(parent), layout_(this)
     //Creating main upper label
     QString str = "Best players";
     labels_[0] = new QLabel;
-    labels_[0]->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Ignored);
+    labels_[0]->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
     labels_[0]->setText(str);
     labels_[0]->setStyleSheet("QLabel { background-color : gray; color : black; }");
     labels_[0]->setAlignment(Qt::AlignHCenter);
@@ -43,9 +44,11 @@ Statistic::Statistic(QWidget *parent) : QWidget(parent), layout_(this)
       labels_[i]->setAlignment(Qt::AlignHCenter);
       layout_.addWidget(labels_[i], 1);
     }
-
+    layout_.addWidget(but_back_, 1);
     layout_.setSpacing(40);
-    layout_.setContentsMargins(250, 100, 250, 100);
+    layout_.setContentsMargins(250, 20, 250, 100);
 
     setLayout(&layout_);
+
+    connect(but_back_, &QPushButton::clicked, this, &Statistic::GoToMainMenu);
 }

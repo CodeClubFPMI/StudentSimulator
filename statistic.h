@@ -11,7 +11,7 @@ public:
     explicit Statistic(QWidget *parent = nullptr);
 
 signals:
-
+    void GoToMainMenu();
 private:
     QVBoxLayout layout_;
 
