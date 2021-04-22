@@ -14,12 +14,7 @@ public:
 signals:
 
 private:
-   QVBoxLayout layout_;
-   QPushButton but_new_game_;
-   QPushButton but_load_game_;
-   QPushButton but_statisic_;
-   QPushButton but_settings_;
-   QPushButton but_exit_;
+    QVBoxLayout layout_;
 };
 
 #endif // MAINMENU_H
