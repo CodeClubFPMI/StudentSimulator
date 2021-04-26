@@ -1,5 +1,7 @@
 #include "mainwindow.h"
 #include "settings.h"
+//
+#include "gamemenu.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QWidget(parent), stacked_widget_(this)
@@ -11,12 +13,16 @@ MainWindow::MainWindow(QWidget *parent)
     statistic_ = new Statistic;
 
     resize(800, 790);
+
+    GameMenu* game = new GameMenu;
+    stacked_widget_.addWidget(game);
+
     stacked_widget_.addWidget(main_menu_);
     //stacked_widget_.setCurrentIndex(2);
     stacked_widget_.addWidget(statistic_);
     stacked_widget_.addWidget(settings_);
 
-    stacked_widget_.setCurrentIndex(0); // just for test
+    stacked_widget_.setCurrentIndex(0);
     stacked_widget_.show();
     setLayout(stacked_widget_.layout());
 

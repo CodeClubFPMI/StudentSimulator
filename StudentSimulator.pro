@@ -10,6 +10,7 @@ CONFIG += c++11
 DEFINES += PRO_FILE_PWD=$$sprintf("\"\\\"%1\\\"\"", $$_PRO_FILE_PWD_)
 
 SOURCES += \
+    gamemenu.cpp \
     main.cpp \
     mainmenu.cpp \
     mainwindow.cpp \
@@ -18,6 +19,7 @@ SOURCES += \
     statistic.cpp
 
 HEADERS += \
+    gamemenu.h \
     mainmenu.h \
     mainwindow.h \
     settings.h \
