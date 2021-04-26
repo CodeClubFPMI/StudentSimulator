@@ -6,11 +6,11 @@
 #include <QVBoxLayout>
 #include <QScrollBar>
 
-class GameMenu : public QWidget
+class FoodMenu : public QWidget
 {
     Q_OBJECT
 public:
-    explicit GameMenu(QWidget *parent = nullptr);
+    explicit FoodMenu(QWidget *parent = nullptr);
 
 signals:
 
