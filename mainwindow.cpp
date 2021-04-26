@@ -1,7 +1,7 @@
 #include "mainwindow.h"
 #include "settings.h"
 //
-#include "gamemenu.h"
+#include "foodmenu.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QWidget(parent), stacked_widget_(this)
@@ -14,7 +14,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     resize(800, 790);
 
-    GameMenu* game = new GameMenu;
+    FoodMenu* game = new FoodMenu;
     stacked_widget_.addWidget(game);
 
     stacked_widget_.addWidget(main_menu_);

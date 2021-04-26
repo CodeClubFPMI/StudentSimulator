@@ -1,5 +1,5 @@
-#ifndef GAMEMENU_H
-#define GAMEMENU_H
+#ifndef FOODMENU_H
+#define FOODMENU_H
 
 #include <QWidget>
 #include <QPushButton>
@@ -20,4 +20,4 @@ private:
     QPushButton ** buttons_;
 };
 
-#endif // GAMEMENU_H
+#endif // FOODMENU_H

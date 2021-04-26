@@ -1,8 +1,8 @@
-#include "gamemenu.h"
+#include "foodmenu.h"
 #include <QWidget>
 #include <QScrollBar>
 
-GameMenu::GameMenu(QWidget *parent) : QWidget(parent)
+FoodMenu::FoodMenu(QWidget *parent) : QWidget(parent)
 {
     // test
     // TODO scrollBar (or Area, I don't know)
