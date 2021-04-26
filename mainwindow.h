@@ -4,6 +4,7 @@
 #include <QWidget>
 #include <QStackedWidget>
 #include <QPushButton>
+#include "gamewindow.h"
 #include "settings.h"
 #include "statistic.h"
 #include "mainmenu.h"
@@ -18,6 +19,7 @@ public:
 
 private:
     QStackedWidget stacked_widget_;
+    GameWindow * game_window_;
     MainMenu * main_menu_;
     Settings * settings_;
     Statistic * statistic_;

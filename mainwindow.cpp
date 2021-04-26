@@ -7,11 +7,13 @@ MainWindow::MainWindow(QWidget *parent)
 {
 
     main_menu_ = new MainMenu;
+    game_window_ = new GameWindow;
     settings_ = new Settings;
     statistic_ = new Statistic;
 
     resize(800, 790);
     stacked_widget_.addWidget(main_menu_);
+    stacked_widget_.addWidget(game_window_);
     //stacked_widget_.setCurrentIndex(2);
     stacked_widget_.addWidget(statistic_);
     stacked_widget_.addWidget(settings_);
@@ -30,23 +32,31 @@ MainWindow::MainWindow(QWidget *parent)
       stacked_widget_.setCurrentIndex(0);
     };
 
+    //lamda for choose game window
+    auto choose_game_window=[&](){
+      stacked_widget_.setCurrentIndex(1);
+    };
+
     //lamda for choose statistic menu
     auto choose_statistic=[&](){
-      stacked_widget_.setCurrentIndex(1);
+      stacked_widget_.setCurrentIndex(2);
     };
 
 
     //lamda for choose settings menu
     auto choose_settings=[&](){
-      stacked_widget_.setCurrentIndex(2);
+      stacked_widget_.setCurrentIndex(3);
     };
 
     //closing game
     connect(main_menu_, &MainMenu::GoToExit, close);
 
     //back to main menu
-    connect(settings_, &Settings::GoToMainMenu, choose_main_menu);
+    connect(settings_, &Settings::GoToMainMenu, this, choose_main_menu);
     connect(statistic_, &Statistic::GoToMainMenu, choose_main_menu);
+
+    //choose game window
+    connect(main_menu_, &MainMenu::GoToGameWindow, choose_game_window);
 
     //choose settings menu
     connect(main_menu_, &MainMenu::GoToStatistic, choose_statistic);
@@ -57,7 +67,9 @@ MainWindow::MainWindow(QWidget *parent)
 
 }
 
+
 MainWindow::~MainWindow()
 {
 }
+
 

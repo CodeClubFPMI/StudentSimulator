@@ -12,6 +12,7 @@ public:
 
 signals:
    void GoToExit();
+   void GoToGameWindow();
    void GoToSettings();
    void GoToStatistic();
 private:
