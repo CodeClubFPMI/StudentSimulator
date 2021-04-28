@@ -15,8 +15,8 @@ MainWindow::MainWindow(QWidget *parent)
 
     resize(800, 790);
 
-    FoodMenu* game = new FoodMenu;
-    stacked_widget_.addWidget(game);
+//    FoodMenu* game = new FoodMenu;
+//    stacked_widget_.addWidget(game);
 
     stacked_widget_.addWidget(main_menu_);
     stacked_widget_.addWidget(game_window_);

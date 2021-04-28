@@ -8,6 +8,7 @@
 #include <QHBoxLayout>
 #include <QGridLayout>
 #include <QPushButton>
+#include "parametrs.h"
 
 class GameWindow : public QWidget
 {
@@ -21,6 +22,7 @@ private:
     QStackedWidget stacked_widget_;
     QHBoxLayout buff_buttons_layout_;
     QHBoxLayout action_buttons_layout_;
+    Parametrs * parametrs_widget_;
 
 };
 
