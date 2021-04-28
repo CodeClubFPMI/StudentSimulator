@@ -56,7 +56,7 @@ Parametrs::Parametrs(QWidget *parent) : QWidget(parent), parametrs_layout_(this)
     money_label = new QLabel;
     money_label->setStyleSheet("QLabel { background-color : green; color : black; border: 2px solid black;}");
     parametrs_layout_.addWidget(money_label, 3, 3);
-    money_label->setText("Money: 300$");
+    money_label->setText("Buks: 300$");
     money_label->setFont(font);
     money_label->setAlignment(Qt::AlignHCenter);
 }
