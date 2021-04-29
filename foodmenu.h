@@ -1,6 +1,8 @@
 #ifndef FOODMENU_H
 #define FOODMENU_H
 
+#include "button.h"
+
 #include <QWidget>
 #include <QPushButton>
 #include <QVBoxLayout>
@@ -17,7 +19,7 @@ signals:
 
 private:
     QVBoxLayout layout_;
-    QVector<QPushButton *> buttons_;
+    QVector<Button *> buttons_;
 };
 
 #endif // FOODMENU_H

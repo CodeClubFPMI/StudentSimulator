@@ -55,11 +55,11 @@ GameWindow::GameWindow(QWidget *parent) : QWidget(parent), main_layout_(this),
 
     // student and menues
     // add game mode choosing
-    student_ = new Student(Game::NEW_GAME);
+    //student_ = new Student(Game::NEW_GAME);
 
-    food_menu_ = new FoodMenu;
+    //food_menu_ = new FoodMenu;
 
-    connect(food_menu_, &FoodMenu::raise_food_value_, student_,
-            &Student::raise_food_value_);
-    emit raise_food_value_(1);
+   // connect(food_menu_, &FoodMenu::raise_food_value_, student_,
+     //       &Student::raise_food_value_);
+
 }

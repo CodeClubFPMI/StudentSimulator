@@ -10,26 +10,30 @@ CONFIG += c++11
 DEFINES += PRO_FILE_PWD=$$sprintf("\"\\\"%1\\\"\"", $$_PRO_FILE_PWD_)
 
 SOURCES += \
+    JSONparser.cpp \
+    button.cpp \
     foodmenu.cpp \
     gamewindow.cpp \
     main.cpp \
     mainmenu.cpp \
     mainwindow.cpp \
-    parser.cpp \
     settings.cpp \
     student.cpp \
-    statistic.cpp
+    statistic.cpp \
+    utilities.cpp
 
 HEADERS += \
+    JSONparser.h \
+    button.h \
     foodmenu.h \
     gamewindow.h \
     mainmenu.h \
     mainwindow.h \
-    parser.h \
     settings.h \
     student.h \
     statistic.h \
-    student.h
+    student.h \
+    utilities.h
 
 
 FORMS +=
