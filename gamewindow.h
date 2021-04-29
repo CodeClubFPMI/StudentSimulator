@@ -1,6 +1,8 @@
 #ifndef GAMEWINDOW_H
 #define GAMEWINDOW_H
 
+#include "student.h"
+#include "foodmenu.h"
 #include <QLabel>
 #include <QWidget>
 #include <QStackedWidget>
@@ -22,6 +24,8 @@ private:
     QHBoxLayout buff_buttons_layout_;
     QHBoxLayout action_buttons_layout_;
 
+    Student * student_;
+    FoodMenu * food_menu_;
 };
 
 #endif // GAMEWINDOW_H

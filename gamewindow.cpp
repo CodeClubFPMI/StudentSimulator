@@ -1,5 +1,6 @@
 #include "gamewindow.h"
-
+#include "student.h"
+#include "foodmenu.h"
 GameWindow::GameWindow(QWidget *parent) : QWidget(parent), main_layout_(this),
     parametrs_layout_(this), stacked_widget_(this), buff_buttons_layout_(this), action_buttons_layout_(this)
 {
@@ -51,4 +52,14 @@ GameWindow::GameWindow(QWidget *parent) : QWidget(parent), main_layout_(this),
     main_layout_.addWidget(&stacked_widget_, 5);
     main_layout_.addLayout(&action_buttons_layout_, 1);
     setLayout(&main_layout_);
+
+    // student and menues
+    // add game mode choosing
+    student_ = new Student(Game::NEW_GAME);
+
+    food_menu_ = new FoodMenu;
+
+    connect(food_menu_, &FoodMenu::raise_food_value_, student_,
+            &Student::raise_food_value_);
+    emit raise_food_value_(1);
 }

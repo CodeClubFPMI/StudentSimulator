@@ -50,7 +50,7 @@ void Student::raise_happiness_value_(int increase_arg){
 void Student::raise_education_value_(int increase_arg){
     education_ = change_properties(education_, increase_arg);
 }
-void Student::raise_money_value_(int increase_arg){
+void Student::raise_money_value_(qreal increase_arg){
     money_ += increase_arg;
 }
 
@@ -90,6 +90,6 @@ void Student::reduce_education_value_(int reduce_arg){
     }
 }
 
-void Student::reduce_money_value_(int reduce_arg){
+void Student::reduce_money_value_(qreal reduce_arg){
     money_ -= reduce_arg;
 }

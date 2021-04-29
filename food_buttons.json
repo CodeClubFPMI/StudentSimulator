@@ -1,0 +1,35 @@
+[
+    {
+    "Eat a doshik" :  
+        {   
+            "food" : 10, 
+            "money" : 0.7, 
+            "happiness" : 1, 
+            "education" : 0 , 
+            "health" : -5 , 
+            "energy" : -2
+        }
+    },
+    {
+    "Stop for a shawarma" :
+        {
+            "food" : 10, 
+            "money" : 0.7, 
+            "happiness" : 1, 
+            "education" : 0 , 
+            "health" : -5 , 
+            "energy" : -2
+        }
+    },
+    {
+    "Go to the canteen" :
+        {
+            "food" : 10, 
+            "money" : 0.7, 
+            "happiness" : 1, 
+            "education" : 0 , 
+            "health" : -5 , 
+            "energy" : -2
+        }
+    }
+]
