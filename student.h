@@ -15,6 +15,14 @@ class Student : public QObject
 public:
     explicit Student(Game);
 
+    int get_food_value();
+    int get_happiness_value();
+    int get_education_value();
+    int get_health_value();
+    int get_energy_value();
+    int get_sem_value();
+    qreal get_money_value();
+
 signals:
     // when one of the properties (except of money) drops to 0, student dies :(
     // TODO: mb swap QString for enum
