@@ -1,7 +1,7 @@
 #ifndef SAVEGAME_H
 #define SAVEGAME_H
 
-#include "student.h"
+#include "Game/student.h"
 
 #include <QString>
 

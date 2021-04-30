@@ -1,7 +1,7 @@
 #include "foodmenu.h"
 #include "student.h"
-#include "JSONparser.h"
-#include "utilities.h"
+#include "Utilities/JSONparser.h"
+#include "Utilities/utilities.h"
 
 #include <QWidget>
 #include <QPushButton>

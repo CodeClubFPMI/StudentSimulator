@@ -4,10 +4,10 @@
 #include <QWidget>
 #include <QStackedWidget>
 #include <QPushButton>
-#include "gamewindow.h"
-#include "settings.h"
-#include "statistic.h"
-#include "mainmenu.h"
+#include "Game/gamewindow.h"
+#include "MainMenu/settings.h"
+#include "MainMenu/statistic.h"
+#include "MainMenu/mainmenu.h"
 
 class MainWindow : public QWidget
 {
