@@ -5,11 +5,6 @@
 #include <QWidget>
 #include <QPushButton>
 #include <QVector>
-#include <QDebug>
-#include <QFile>
-#include <QJsonObject>
-#include <QJsonArray>
-#include <QJsonParseError>
 
 FoodMenu::FoodMenu(QWidget *parent) : QWidget(parent)
 {
@@ -17,11 +12,9 @@ FoodMenu::FoodMenu(QWidget *parent) : QWidget(parent)
 
     JSONParser parser;
     buttons_ = parser.buttons_form_json("food_buttons.json");
-    for (int i = 0; i < buttons_.size(); ++i){
-        buttons_[i]->get_button_ptr()->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-        layout_.addWidget(buttons_[i]->get_button_ptr(), 1);
-    }
 
+
+    buttons_[i]->get_button_ptr()->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
     layout_.setSpacing(5);
     layout_.setContentsMargins(100, 100, 100, 100);
 

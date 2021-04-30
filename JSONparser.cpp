@@ -31,7 +31,7 @@ QVector<Button *> JSONParser::buttons_form_json(const QString &file_name){
         for (int i = 0; i < buttons_json_arr.size(); ++i){
             json_obj_tmp = buttons_json_arr[i].toObject();
 
-            // it is important (?) to set parent, when we drive them in the window
+            // it is important (?) to set parent, when we put them in the window
             qpushbutton_tmp = new QPushButton(json_obj_tmp.keys().first());
 
             json_obj_tmp = json_obj_tmp.value(json_obj_tmp.keys().first()).toObject();

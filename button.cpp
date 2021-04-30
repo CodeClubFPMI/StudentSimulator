@@ -2,8 +2,6 @@
 
 Button::Button(QWidget *parent) : QWidget(parent){}
 
-
-
 // getters
 
 int Button::get_food_changes(){
