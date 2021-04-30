@@ -14,7 +14,7 @@ FoodMenu::FoodMenu(QWidget *parent) : QWidget(parent)
     buttons_ = parser.buttons_form_json("food_buttons.json");
 
 
-    buttons_[i]->get_button_ptr()->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+    // buttons_[i]->get_button_ptr()->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
     layout_.setSpacing(5);
     layout_.setContentsMargins(100, 100, 100, 100);
 

@@ -20,6 +20,7 @@ signals:
     // TODO: mb swap QString for enum
     void death_of_student(QString cause_of_death);
 
+    // TODO connect them
 public slots:
     void raise_food_value_(int increase_arg);
     void raise_energy_value_(int increase_arg);
@@ -46,8 +47,12 @@ private:
    int happiness_;
    int education_;
 
-   // this properie can have more than or less 0
+   // this propertie can have more than or less 0
    int money_;
+
+   // TODO getter and setter
+   // this propertie is for saving the term. The actions available to the user depend on this
+   int sem_;
 };
 
 #endif // STUDENT_H

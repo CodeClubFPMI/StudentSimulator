@@ -4,14 +4,15 @@
 Student::Student(Game game)
 {
     QString file_path;
+    // TODO correct file path
     switch(game){
     case 0:
         file_path = QCoreApplication::applicationDirPath() +
-            "/configs/new_game_config.txt";
+            "/configs/new_game_config.json";
         break;
     case 1:
         file_path = QCoreApplication::applicationDirPath() +
-            "/configs/load_game_config.txt";
+            "/configs/load_game_config.json";
         break;
     default:
         break;

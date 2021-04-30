@@ -17,6 +17,7 @@ SOURCES += \
     main.cpp \
     mainmenu.cpp \
     mainwindow.cpp \
+    savegame.cpp \
     settings.cpp \
     student.cpp \
     statistic.cpp \
@@ -29,6 +30,7 @@ HEADERS += \
     gamewindow.h \
     mainmenu.h \
     mainwindow.h \
+    savegame.h \
     settings.h \
     student.h \
     statistic.h \

@@ -19,6 +19,9 @@ int Button::get_health_changes(){
 int Button::get_energy_changes(){
     return energy_;
 }
+int Button::get_available_sem(){
+    return sem_;
+}
 qreal Button::get_money_changes(){
     return money_;
 }

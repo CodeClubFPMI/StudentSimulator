@@ -41,7 +41,8 @@ QVector<Button *> JSONParser::buttons_form_json(const QString &file_name){
                                     json_obj_tmp.value("education").toInt(),
                                     json_obj_tmp.value("health").toInt(),
                                     json_obj_tmp.value("energy").toInt(),
-                                    qreal(json_obj_tmp.value("money").toDouble()));
+                                    qreal(json_obj_tmp.value("money").toDouble()),
+                                    json_obj_tmp.value("sem").toInt());
 
             buttons.push_back(button_tmp);
             button_tmp = nullptr;
