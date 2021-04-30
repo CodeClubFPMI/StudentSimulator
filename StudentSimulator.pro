@@ -10,34 +10,33 @@ CONFIG += c++11
 DEFINES += PRO_FILE_PWD=$$sprintf("\"\\\"%1\\\"\"", $$_PRO_FILE_PWD_)
 
 SOURCES += \
-    JSONparser.cpp \
-    button.cpp \
-    foodmenu.cpp \
-    gamewindow.cpp \
+    Utilities/JSONparser.cpp \
+    Utilities/button.cpp \
+    Game/foodmenu.cpp \
+    Game/gamewindow.cpp \
     main.cpp \
-    mainmenu.cpp \
-    mainwindow.cpp \
-    parametrs.cpp \
-    savegame.cpp \
-    settings.cpp \
-    student.cpp \
-    statistic.cpp \
-    utilities.cpp
+    MainMenu/mainmenu.cpp \
+    MainMenu/mainwindow.cpp \
+    Game/parametrs.cpp \
+    Utilities/savegame.cpp \
+    MainMenu/settings.cpp \
+    Game/student.cpp \
+    MainMenu/statistic.cpp \
+    Utilities/utilities.cpp
 
 HEADERS += \
-    JSONparser.h \
-    button.h \
-    foodmenu.h \
-    gamewindow.h \
-    mainmenu.h \
-    mainwindow.h \
-    parametrs.h \
-    savegame.h \
-    settings.h \
-    student.h \
-    statistic.h \
-    student.h \
-    utilities.h
+    Utilities/JSONparser.h \
+    Utilities/button.h \
+    Game/foodmenu.h \
+    Game/gamewindow.h \
+    MainMenu/mainmenu.h \
+    MainMenu/mainwindow.h \
+    Game/parametrs.h \
+    Utilities/savegame.h \
+    MainMenu/settings.h \
+    Game/student.h \
+    MainMenu/statistic.h \
+    Utilities/utilities.h
 
 
 FORMS +=

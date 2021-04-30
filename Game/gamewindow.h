@@ -1,8 +1,8 @@
 #ifndef GAMEWINDOW_H
 #define GAMEWINDOW_H
 
-#include "student.h"
-#include "foodmenu.h"
+#include "Game/student.h"
+#include "Game/foodmenu.h"
 #include <QLabel>
 #include <QWidget>
 #include <QStackedWidget>
@@ -10,7 +10,7 @@
 #include <QHBoxLayout>
 #include <QGridLayout>
 #include <QPushButton>
-#include "parametrs.h"
+#include "Game/parametrs.h"
 
 class GameWindow : public QWidget
 {

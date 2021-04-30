@@ -2,7 +2,7 @@
 #include "settings.h"
 
 //
-#include "foodmenu.h"
+#include "Game/foodmenu.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QWidget(parent), stacked_widget_(this)
