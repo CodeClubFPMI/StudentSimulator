@@ -1,10 +1,12 @@
 #ifndef FOODMENU_H
 #define FOODMENU_H
 
+#include "button.h"
+
 #include <QWidget>
 #include <QPushButton>
 #include <QVBoxLayout>
-#include <QScrollBar>
+#include <QVector>
 
 class FoodMenu : public QWidget
 {
@@ -13,11 +15,11 @@ public:
     explicit FoodMenu(QWidget *parent = nullptr);
 
 signals:
+    void raise_food_value_(int);
 
 private:
     QVBoxLayout layout_;
-    QScrollBar * scroll_bar_;
-    QPushButton ** buttons_;
+    QVector<Button *> buttons_;
 };
 
 #endif // FOODMENU_H

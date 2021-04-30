@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "settings.h"
+
 //
 #include "foodmenu.h"
 
@@ -17,7 +18,6 @@ MainWindow::MainWindow(QWidget *parent)
 
 //    FoodMenu* game = new FoodMenu;
 //    stacked_widget_.addWidget(game);
-
     stacked_widget_.addWidget(main_menu_);
     stacked_widget_.addWidget(game_window_);
     //stacked_widget_.setCurrentIndex(2);
@@ -27,7 +27,6 @@ MainWindow::MainWindow(QWidget *parent)
     stacked_widget_.setCurrentIndex(0);
     stacked_widget_.show();
     setLayout(stacked_widget_.layout());
-
     //lambda for close game
     auto close=[&](){
        this->close();
