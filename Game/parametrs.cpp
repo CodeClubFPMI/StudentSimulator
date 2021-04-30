@@ -1,4 +1,5 @@
 #include "parametrs.h"
+#include "Utilities/utilities.h"
 
 Parametrs::Parametrs(QWidget *parent) : QWidget(parent), parametrs_layout_(this)
 {
@@ -10,9 +11,6 @@ Parametrs::Parametrs(QWidget *parent) : QWidget(parent), parametrs_layout_(this)
     parametrs_layout_.setRowStretch(1, 1);
     parametrs_layout_.setRowStretch(2, 1);
     parametrs_layout_.setRowStretch(3, 1);
-//    parametrs_layout_.setRowStretch(4, 1);
-//    parametrs_layout_.setRowStretch(5, 1);
-//    parametrs_layout_.setRowStretch(6, 1);
 
     //Set main labels on screen
     health_label = new QLabel;
@@ -42,7 +40,7 @@ Parametrs::Parametrs(QWidget *parent) : QWidget(parent), parametrs_layout_(this)
     study_label = new QLabel;
     study_label->setStyleSheet("QLabel { background-color : lightblue; color : black; border: 2px solid black; }");
     parametrs_layout_.addWidget(study_label, 1, 3);
-    study_label->setText("Studing: 0");
+    study_label->setText("Education: 0");
     study_label->setFont(font);
     study_label->setAlignment(Qt::AlignHCenter);
 
