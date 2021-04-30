@@ -8,7 +8,6 @@ MainWindow::MainWindow(QWidget *parent)
     : QWidget(parent), stacked_widget_(this)
 
 {
-
     main_menu_ = new MainMenu;
     game_window_ = new GameWindow;
     settings_ = new Settings;
@@ -68,7 +67,6 @@ MainWindow::MainWindow(QWidget *parent)
 
     //choose settings menu
     connect(main_menu_, &MainMenu::GoToSettings, choose_settings );
-
 
 }
 

@@ -8,11 +8,11 @@ Student::Student(Game game)
     switch(game){
     case 0:
         file_path = QCoreApplication::applicationDirPath() +
-            "/configs/new_game_config.json";
+            "//new_game.json";
         break;
     case 1:
         file_path = QCoreApplication::applicationDirPath() +
-            "/configs/load_game_config.json";
+            "//saved_game.json";
         break;
     default:
         break;
@@ -33,6 +33,28 @@ int change_properties(int property, int changing_arg){
     }
     return tmp;
 
+}
+
+int Student::get_food_value(){
+    return food_;
+}
+int Student::get_happiness_value(){
+    return happiness_;
+}
+int Student::get_education_value(){
+    return education_;
+}
+int Student::get_health_value(){
+    return health_;
+}
+int Student::get_energy_value(){
+    return energy_;
+}
+int Student::get_sem_value(){
+    return sem_;
+}
+qreal Student::get_money_value(){
+    return money_;
 }
 
 void Student::raise_food_value_(int increase_arg){
