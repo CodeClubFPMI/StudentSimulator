@@ -1,7 +1,7 @@
 #include "mainwindow.h"
 #include "settings.h"
 
-//
+#include <QFile>
 #include "Game/foodmenu.h"
 
 MainWindow::MainWindow(QWidget *parent)
@@ -13,7 +13,7 @@ MainWindow::MainWindow(QWidget *parent)
     settings_ = new Settings;
     statistic_ = new Statistic;
 
-    resize(800, 790);
+    resize(800, 1000);
 
 //    FoodMenu* game = new FoodMenu;
 //    stacked_widget_.addWidget(game);
@@ -26,6 +26,13 @@ MainWindow::MainWindow(QWidget *parent)
     stacked_widget_.setCurrentIndex(0);
     stacked_widget_.show();
     setLayout(stacked_widget_.layout());
+
+
+    //Upload css to game window
+    QFile file(":/Styles/GameMenuStyles.css");
+    file.open(QFile::ReadOnly);
+    game_window_->setStyleSheet(file.readAll());
+
     //lambda for close game
     auto close=[&](){
        this->close();

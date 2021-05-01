@@ -10,6 +10,7 @@ CONFIG += c++11
 DEFINES += PRO_FILE_PWD=$$sprintf("\"\\\"%1\\\"\"", $$_PRO_FILE_PWD_)
 
 SOURCES += \
+    Game/actionbuttons.cpp \
     Utilities/JSONparser.cpp \
     Utilities/button.cpp \
     Game/foodmenu.cpp \
@@ -25,6 +26,7 @@ SOURCES += \
     Utilities/utilities.cpp
 
 HEADERS += \
+    Game/actionbuttons.h \
     Utilities/JSONparser.h \
     Utilities/button.h \
     Game/foodmenu.h \
@@ -45,3 +47,6 @@ FORMS +=
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    Resources/Resources.qrc

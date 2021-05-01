@@ -20,6 +20,9 @@ private:
     QLabel * money_label;
     QLabel * energy_label;
     QLabel * study_label;
+    QLabel * time_label;
+    QLabel * semestr_label;
+    QLabel * status_label;
 };
 
 #endif // PARAMETRS_H

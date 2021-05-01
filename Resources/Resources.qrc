@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/Styles">
+        <file>GameMenuStyles.css</file>
+        <file>MainMenuStyles.css</file>
+    </qresource>
+    <qresource prefix="/Images"/>
+</RCC>

@@ -12,8 +12,5 @@ namespace menu_buttons{
     void change_buttons_style(QVector<Button *> &buttons, QVBoxLayout &layout);
 }
 
-namespace labels {
-    void set_label_parametrs(QLabel* label, QString background_color, QString text);
-}
 
 #endif // UTILITIES_H
