@@ -1,0 +1,110 @@
+[
+    {
+        "Go to class" : 
+            {
+                "food" : -5, 
+                "money" : 0, 
+                "happiness" : 8, 
+                "education" : -5, 
+                "health" : -5, 
+                "energy" : -2,
+                "sem" : 1
+            }
+    },
+    {
+        "Read lectures" : 
+            {
+                "food" : -5, 
+                "money" : 0, 
+                "happiness" : 8, 
+                "education" : -5, 
+                "health" : -5, 
+                "energy" : -2,
+                "sem" : 1
+            }
+    },
+    {
+        "Do your homework" : 
+            {
+                "food" : -5, 
+                "money" : 0, 
+                "happiness" : 8, 
+                "education" : -5, 
+                "health" : -5, 
+                "energy" : -2,
+                "sem" : 1
+            }
+    },
+    {
+        "Making a lab" : 
+            {
+                "food" : -5, 
+                "money" : 0, 
+                "happiness" : 8, 
+                "education" : -5, 
+                "health" : -5, 
+                "energy" : -2,
+                "sem" : 1
+            }
+    },
+    {
+        "Getting ready with your neighbours" : 
+            {
+                "food" : -5, 
+                "money" : 0, 
+                "happiness" : 8, 
+                "education" : -5, 
+                "health" : -5, 
+                "energy" : -2,
+                "sem" : 1
+            }
+    },
+    {
+        "Prepare for the exam" : 
+            {
+                "food" : -5, 
+                "money" : 0, 
+                "happiness" : 8, 
+                "education" : -5, 
+                "health" : -5, 
+                "energy" : -2,
+                "sem" : 1
+            }
+    },
+    {
+        "Buy a lab" : 
+            {
+                "food" : -5, 
+                "money" : 0, 
+                "happiness" : 8, 
+                "education" : -5, 
+                "health" : -5, 
+                "energy" : -2,
+                "sem" : 1
+            }
+    },
+    {
+        "Sign up for a courses" : 
+            {
+                "food" : -5, 
+                "money" : 0, 
+                "happiness" : 8, 
+                "education" : -5, 
+                "health" : -5, 
+                "energy" : -2,
+                "sem" : 1
+            }
+    },
+    {
+        "Write a diploma" : 
+            {
+                "food" : -5, 
+                "money" : 0, 
+                "happiness" : 8, 
+                "education" : -5, 
+                "health" : -5, 
+                "energy" : -2,
+                "sem" : 1
+            }
+    }
+]

@@ -1,0 +1,98 @@
+[
+    {
+        "Go for a jog" :
+            {
+                "food" : -10, 
+                "money" : 0, 
+                "happiness" : 15, 
+                "education" : -2, 
+                "health" : 2, 
+                "energy" : -10,
+                "sem" : 1
+            }
+    },
+    {
+        "Go to PE" :
+            {
+                "food" : -10, 
+                "money" : 0, 
+                "happiness" : 15, 
+                "education" : -2, 
+                "health" : 2, 
+                "energy" : -10,
+                "sem" : 1
+            }
+    },
+    {
+        "Join a gym" :
+            {
+                "food" : -10, 
+                "money" : 0, 
+                "happiness" : 15, 
+                "education" : -2, 
+                "health" : 2, 
+                "energy" : -10,
+                "sem" : 1
+            }
+    },
+    {
+        "Buy tablets" :
+            {
+                "food" : -10, 
+                "money" : 0, 
+                "happiness" : 15, 
+                "education" : -2, 
+                "health" : 2, 
+                "energy" : -10,
+                "sem" : 1
+            }
+    },
+    {
+        "Go to your personal doctor" :
+            {
+                "food" : -10, 
+                "money" : 0, 
+                "happiness" : 15, 
+                "education" : -2, 
+                "health" : 2, 
+                "energy" : -10,
+                "sem" : 1
+            }
+    },
+    {
+        "Going to hospital" :
+            {
+                "food" : -10, 
+                "money" : 0, 
+                "happiness" : 15, 
+                "education" : -2, 
+                "health" : 2, 
+                "energy" : -10,
+                "sem" : 1
+            }
+    },
+    {
+        "Visit a private clinic" :
+            {
+                "food" : -10, 
+                "money" : 0, 
+                "happiness" : 15, 
+                "education" : -2, 
+                "health" : 2, 
+                "energy" : -10,
+                "sem" : 1
+            }
+    },
+    {
+        "Getting treatment in Israel" :
+            {
+                "food" : -10, 
+                "money" : 0, 
+                "happiness" : 15, 
+                "education" : -2, 
+                "health" : 2, 
+                "energy" : -10,
+                "sem" : 1
+            }
+    }
+]

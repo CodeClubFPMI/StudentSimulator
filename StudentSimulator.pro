@@ -11,9 +11,14 @@ DEFINES += PRO_FILE_PWD=$$sprintf("\"\\\"%1\\\"\"", $$_PRO_FILE_PWD_)
 
 SOURCES += \
     Game/actionbuttons.cpp \
+    Game/Actions/educationmenu.cpp \
+    Game/Actions/energymenu.cpp \
+    Game/Actions/happinessmenu.cpp \
+    Game/Actions/healthmenu.cpp \
+    Game/Actions/moneymenu.cpp \
     Utilities/JSONparser.cpp \
     Utilities/button.cpp \
-    Game/foodmenu.cpp \
+    Game/Actions/foodmenu.cpp \
     Game/gamewindow.cpp \
     main.cpp \
     MainMenu/mainmenu.cpp \
@@ -27,9 +32,14 @@ SOURCES += \
 
 HEADERS += \
     Game/actionbuttons.h \
+    Game/Actions/educationmenu.h \
+    Game/Actions/energymenu.h \
+    Game/Actions/happinessmenu.h \
+    Game/Actions/healthmenu.h \
+    Game/Actions/moneymenu.h \
     Utilities/JSONparser.h \
     Utilities/button.h \
-    Game/foodmenu.h \
+    Game/Actions/foodmenu.h \
     Game/gamewindow.h \
     MainMenu/mainmenu.h \
     MainMenu/mainwindow.h \

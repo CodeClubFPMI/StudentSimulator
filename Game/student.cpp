@@ -8,11 +8,11 @@ Student::Student(Game game)
     switch(game){
     case 0:
         file_path = QCoreApplication::applicationDirPath() +
-            "//new_game.json";
+            "//Data//new_game.json";
         break;
     case 1:
         file_path = QCoreApplication::applicationDirPath() +
-            "//saved_game.json";
+            "//Data//saved_game.json";
         break;
     default:
         break;
