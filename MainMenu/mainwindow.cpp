@@ -2,7 +2,7 @@
 #include "settings.h"
 
 //
-#include "Game/foodmenu.h"
+#include "Game/Actions/energymenu.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QWidget(parent), stacked_widget_(this)
@@ -15,8 +15,10 @@ MainWindow::MainWindow(QWidget *parent)
 
     resize(800, 790);
 
-//    FoodMenu* game = new FoodMenu;
-//    stacked_widget_.addWidget(game);
+    //////////////////////////////////////
+    EnergyMenu* game = new EnergyMenu;
+    stacked_widget_.addWidget(game);
+
     stacked_widget_.addWidget(main_menu_);
     stacked_widget_.addWidget(game_window_);
     //stacked_widget_.setCurrentIndex(2);

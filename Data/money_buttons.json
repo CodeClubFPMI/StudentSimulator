@@ -1,0 +1,98 @@
+[
+    {
+        "Help friends with studies" :
+            {
+                "food" : -5, 
+                "money" : 10, 
+                "happiness" : 0, 
+                "education" : 0, 
+                "health" : -5, 
+                "energy" : -15,
+                "sem" : 1
+            }
+    },
+    {
+        "Hand out flyers" :
+            {
+                "food" : -5, 
+                "money" : 10, 
+                "happiness" : 0, 
+                "education" : 0, 
+                "health" : -5, 
+                "energy" : -15,
+                "sem" : 1
+            }
+    },
+    {
+        "Waiter" :
+            {
+                "food" : -5, 
+                "money" : 10, 
+                "happiness" : 0, 
+                "education" : 0, 
+                "health" : -5, 
+                "energy" : -15,
+                "sem" : 1
+            }
+    },
+    {
+        "Playing in transition" :
+            {
+                "food" : -5, 
+                "money" : 10, 
+                "happiness" : 0, 
+                "education" : 0, 
+                "health" : -5, 
+                "energy" : -15,
+                "sem" : 1
+            }
+    },
+    {
+        "Being a freelancer" :
+            {
+                "food" : -5, 
+                "money" : 10, 
+                "happiness" : 0, 
+                "education" : 0, 
+                "health" : -5, 
+                "energy" : -15,
+                "sem" : 1
+            }
+    },
+    {
+        "Blood donor" :
+            {
+                "food" : -5, 
+                "money" : 10, 
+                "happiness" : 0, 
+                "education" : 0, 
+                "health" : -5, 
+                "energy" : -15,
+                "sem" : 1
+            }
+    },
+    {
+        "Get a job with a company" :
+            {
+                "food" : -5, 
+                "money" : 10, 
+                "happiness" : 0, 
+                "education" : 0, 
+                "health" : -5, 
+                "energy" : -15,
+                "sem" : 1
+            }
+    },
+    {
+        "Go to the casino" :
+            {
+                "food" : -5, 
+                "money" : 10, 
+                "happiness" : 0, 
+                "education" : 0, 
+                "health" : -5, 
+                "energy" : -15,
+                "sem" : 1
+            }
+    }
+]

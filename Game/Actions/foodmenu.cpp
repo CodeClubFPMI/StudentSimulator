@@ -1,5 +1,4 @@
-#include "foodmenu.h"
-#include "student.h"
+#include "Game/Actions/foodmenu.h"
 #include "Utilities/utilities.h"
 
 #include <QWidget>

@@ -12,7 +12,7 @@ QVector<Button *> JSONParser::buttons_form_json(const QString &file_name){
 
     QFile buttons_file;
     QString file_path = PRO_FILE_PWD;
-    file_path += '\\';
+    file_path += "./Data/";
     file_path += file_name;
     buttons_file.setFileName(file_path);
 

@@ -16,7 +16,7 @@ bool SaveGame::save_game_to_JSON(Student *player, QString file_name){
 
     QFile save_file;
     QString file_path = PRO_FILE_PWD;
-    file_path += '\\';
+    file_path += "\\Data";
     file_path += file_name;
     save_file.setFileName(file_path);
     if(save_file.open(QIODevice::WriteOnly)){

@@ -1,0 +1,110 @@
+[
+    {
+        "Get stuck on the phone" :
+            {
+                "food" : -5, 
+                "money" : 0, 
+                "happiness" : 8, 
+                "education" : -5, 
+                "health" : -5, 
+                "energy" : -2,
+                "sem" : 1
+            }
+    },
+    {
+        "Go for a walk" :
+            {
+                "food" : -7, 
+                "money" : 0, 
+                "happiness" : 15, 
+                "education" : -2, 
+                "health" : 2, 
+                "energy" : -10,
+                "sem" : 1
+            }
+    },
+    {
+        "Go to the neighbours in the dormitory" :
+            {
+                "food" : 5, 
+                "money" : 0, 
+                "happiness" : 10, 
+                "education" : 5, 
+                "health" : 0, 
+                "energy" : -10,
+                "sem" : 1
+            }
+    },
+    {
+        "Grab a beer" :
+            {
+                "food" : -10, 
+                "money" : 4, 
+                "happiness" : 20, 
+                "education" : -8, 
+                "health" : -10, 
+                "energy" : -10,
+                "sem" : 1
+            }
+    },
+    {
+        "Go to a movie" :
+            {
+                "food" : -10, 
+                "money" : 10, 
+                "happiness" : 25, 
+                "education" : 0, 
+                "health" : 0, 
+                "energy" : -5,
+                "sem" : 1
+            }
+    },
+    {
+        "Go to a concert" :
+            {
+                "food" : -15, 
+                "money" : 40, 
+                "happiness" : 50, 
+                "education" : -5, 
+                "health" : -5, 
+                "energy" : -20,
+                "sem" : 2
+            }
+    },
+    {
+        "Go to the \"Lauka\"" :
+            {
+                "food" : -10, 
+                "money" : 4, 
+                "happiness" : 25, 
+                "education" : 0, 
+                "health" : -5, 
+                "energy" : -15,
+                "sem" : 2
+            }
+    },
+    {
+        "Go to a club" :
+            {
+                "food" : -20, 
+                "money" : 30, 
+                "happiness" : 60, 
+                "education" : -10, 
+                "health" : -15, 
+                "energy" : -25,
+                "sem" : 3
+            }
+    },
+    {
+        "Go abroad" :
+            {
+                "food" : 0, 
+                "money" : 1000, 
+                "happiness" : 100, 
+                "education" : -20, 
+                "health" : 30, 
+                "energy" : -50,
+                "sem" : 6
+            }
+    }
+]

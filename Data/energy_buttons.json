@@ -1,0 +1,62 @@
+[
+    {
+        "Go to sleep" :
+            {
+                "food" : -10, 
+                "money" : 0, 
+                "happiness" : 15, 
+                "education" : -2, 
+                "health" : 2, 
+                "energy" : -10,
+                "sem" : 1
+            }
+    },
+    {
+        "Have a coffee" :
+            {
+                "food" : -10, 
+                "money" : 0, 
+                "happiness" : 15, 
+                "education" : -2, 
+                "health" : 2, 
+                "energy" : -10,
+                "sem" : 1
+            }
+    },
+    {
+        "Sleeping in classes" :
+            {
+                "food" : -10, 
+                "money" : 0, 
+                "happiness" : 15, 
+                "education" : -2, 
+                "health" : 2, 
+                "energy" : -10,
+                "sem" : 1
+            }
+    },
+    {
+        "Eating sweets" :
+            {
+                "food" : -10, 
+                "money" : 0, 
+                "happiness" : 15, 
+                "education" : -2, 
+                "health" : 2, 
+                "energy" : -10,
+                "sem" : 1
+            }
+    },
+    {
+        "Drinking an energy drink" :
+            {
+                "food" : -10, 
+                "money" : 0, 
+                "happiness" : 15, 
+                "education" : -2, 
+                "health" : 2, 
+                "energy" : -10,
+                "sem" : 1
+            }
+    }
+]
