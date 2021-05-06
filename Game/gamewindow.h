@@ -17,7 +17,7 @@ class GameWindow : public QWidget
 {
     Q_OBJECT
 public:
-    explicit GameWindow(QWidget *parent = nullptr);
+    explicit GameWindow(Game game_config, QWidget *parent = nullptr);
 
 private:
     QVBoxLayout main_layout_;

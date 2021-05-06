@@ -1,27 +1,52 @@
 #include <QCoreApplication>
+#include <QMap>
+#include <QString>
+
 #include "student.h"
+#include "Utilities/JSONparser.h"
 
 Student::Student(Game game)
 {
-    QString file_path;
+    QString file_name;
     // TODO correct file path
     switch(game){
     case 0:
-        file_path = QCoreApplication::applicationDirPath() +
-            "//Data//new_game.json";
+        file_name = "new_game.json";
         break;
     case 1:
-        file_path = QCoreApplication::applicationDirPath() +
-            "//Data//saved_game.json";
+        file_name = "saved_game.json";
         break;
     default:
         break;
     }
-    set_student_config(file_path);
+    set_student_config(file_name);
+    qDebug() << food_;
+    qDebug() << energy_;
+    qDebug() << health_;
+    qDebug() << education_;
+    qDebug() << happiness_;
+    qDebug() << money_;
+    qDebug() << sem_;
+    qDebug() << day_;
+    qDebug() << time_;
 }
 
 // TODO parser
-void Student::set_student_config(const QString &file_path){}
+void Student::set_student_config(const QString &file_name){
+    JSONParser parser;
+    QMap<QString, QVariant> configs = parser.student_configs(file_name);
+    food_ = configs.value("food").toInt();
+    energy_ = configs.value("energy").toInt();
+    health_ = configs.value("health").toInt();
+    education_ = configs.value("education").toInt();
+    happiness_ = configs.value("happiness").toInt();
+    money_ = qreal(configs.value("money").toDouble());
+    sem_ = configs.value("sem").toInt();
+    day_ = configs.value("day").toInt();
+    time_.setHMS(configs.value("time_hour").toInt(),
+                 configs.value("time_minute").toInt(), 0, 0);
+    //time_.
+}
 
 // for changing properties except for money_
 int change_properties(int property, int changing_arg){
@@ -53,8 +78,15 @@ int Student::get_energy_value(){
 int Student::get_sem_value(){
     return sem_;
 }
+int Student::get_day(){
+    return day_;
+}
 qreal Student::get_money_value(){
     return money_;
+}
+
+QTime Student::get_time(){
+    return time_;
 }
 
 void Student::raise_food_value_(int increase_arg){

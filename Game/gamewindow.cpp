@@ -1,7 +1,8 @@
 #include "gamewindow.h"
 #include "student.h"
 #include "foodmenu.h"
-GameWindow::GameWindow(QWidget *parent) : QWidget(parent), main_layout_(this),
+#include "Utilities/utilities.h"
+GameWindow::GameWindow(Game game_config, QWidget *parent) : QWidget(parent), main_layout_(this),
      stacked_widget_(this), buff_buttons_layout_(this), action_buttons_layout_(this)
 {
     //load widget with parametrs of student
@@ -10,7 +11,6 @@ GameWindow::GameWindow(QWidget *parent) : QWidget(parent), main_layout_(this),
     action_buttons_widget_ = new ActionButtons;
 
     QPushButton *push_but2 = new QPushButton;
-
 
     buff_buttons_layout_.addWidget(push_but2);
 
@@ -23,11 +23,6 @@ GameWindow::GameWindow(QWidget *parent) : QWidget(parent), main_layout_(this),
 
     // student and menues
     // add game mode choosing
-    //student_ = new Student(Game::NEW_GAME);
-
-    //food_menu_ = new FoodMenu;
-
-   // connect(food_menu_, &FoodMenu::raise_food_value_, student_,
-     //       &Student::raise_food_value_);
-
+    student_ = new Student(game_config);
+    data_update::refresh_parameters_on_window(parametrs_widget_, student_);
 }

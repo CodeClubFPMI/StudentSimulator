@@ -12,7 +12,8 @@ public:
 
 signals:
    void GoToExit();
-   void GoToGameWindow();
+   void GoToNewGame();
+   void GoToLoadGame();
    void GoToSettings();
    void GoToStatistic();
 private:

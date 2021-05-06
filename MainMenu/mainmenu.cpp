@@ -28,7 +28,8 @@ MainMenu::MainMenu(QWidget *parent) : QWidget(parent), layout_(this)
 
     //send signals from menu to main window
     connect(but_exit_, &QPushButton::clicked, this, &MainMenu::GoToExit);
-    connect(but_new_game_, &QPushButton::clicked, this, &MainMenu::GoToGameWindow);
+    connect(but_new_game_, &QPushButton::clicked, this, &MainMenu::GoToNewGame);
     connect(but_settings_, &QPushButton::clicked, this, &MainMenu::GoToSettings);
     connect(but_statistic_, &QPushButton::clicked, this, &MainMenu::GoToStatistic);
+    connect(but_load_game_, &QPushButton::clicked, this, &MainMenu::GoToLoadGame);
 }

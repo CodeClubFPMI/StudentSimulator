@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <QString>
+#include <QTime>
 
 enum Game{
     NEW_GAME,
@@ -21,7 +22,9 @@ public:
     int get_health_value();
     int get_energy_value();
     int get_sem_value();
+    int get_day();
     qreal get_money_value();
+    QTime get_time();
 
 signals:
     // when one of the properties (except of money) drops to 0, student dies :(
@@ -56,11 +59,14 @@ private:
    int education_;
 
    // this propertie can have more than or less 0
-   int money_;
+   qreal money_;
 
    // TODO getter and setter
    // this propertie is for saving the term. The actions available to the user depend on this
    int sem_;
+
+   int day_;
+   QTime time_;
 };
 
 #endif // STUDENT_H

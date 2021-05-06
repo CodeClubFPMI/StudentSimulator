@@ -1,0 +1,12 @@
+{
+    "education": 10,
+    "energy": 100,
+    "food": 80,
+    "happiness": 80,
+    "health": 90,
+    "money": 200,
+    "sem": 1,
+    "day" : 1,
+    "time_hour": 12,
+    "time_minute" : 0
+}
