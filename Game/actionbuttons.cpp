@@ -18,7 +18,7 @@ ActionButtons::ActionButtons(QWidget *parent) : QWidget(parent), action_buttons_
     education_button_ = new QPushButton;
     education_button_->setText("Education");
     education_button_->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-    education_button_->setStyleSheet("QPushButton:hover { background-color : cyan;}");
+    education_button_->setStyleSheet("QPushButton:hover { background-color : lightblue;}");
     action_buttons_layout_.addWidget(education_button_, 1);
 
     food_button_ = new QPushButton;
@@ -30,7 +30,7 @@ ActionButtons::ActionButtons(QWidget *parent) : QWidget(parent), action_buttons_
     happiness_button_ = new QPushButton;
     happiness_button_->setText("Happiness");
     happiness_button_->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-    happiness_button_->setStyleSheet("QPushButton:hover { background-color : lightblue;}");
+    happiness_button_->setStyleSheet("QPushButton:hover { background-color : cyan;}");
     action_buttons_layout_.addWidget(happiness_button_, 1);
 
     money_button_ = new QPushButton;
@@ -38,5 +38,26 @@ ActionButtons::ActionButtons(QWidget *parent) : QWidget(parent), action_buttons_
     money_button_->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
     money_button_->setStyleSheet("QPushButton:hover { background-color : lightgreen;}");
     action_buttons_layout_.addWidget(money_button_, 1);
+
+    //connects which change action buttons
+    connect(health_button_, SIGNAL(clicked()), &mapper, SLOT(map()));
+    mapper.setMapping(health_button_, 0);
+
+    connect(energy_button_, SIGNAL(clicked()), &mapper, SLOT(map()));
+    mapper.setMapping(energy_button_, 1);
+
+    connect(education_button_, SIGNAL(clicked()), &mapper, SLOT(map()));
+    mapper.setMapping(education_button_, 2);
+
+    connect(food_button_, SIGNAL(clicked()), &mapper, SLOT(map()));
+    mapper.setMapping(food_button_, 3);
+
+    connect(happiness_button_, SIGNAL(clicked()), &mapper, SLOT(map()));
+    mapper.setMapping(happiness_button_, 4);
+
+    connect(money_button_, SIGNAL(clicked()), &mapper, SLOT(map()));
+    mapper.setMapping(money_button_, 5);
+
+    connect(&mapper, SIGNAL(mapped(int)), this, SIGNAL(GoToExit(int)));
 
 }
