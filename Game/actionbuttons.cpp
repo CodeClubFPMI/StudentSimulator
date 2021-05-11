@@ -58,6 +58,6 @@ ActionButtons::ActionButtons(QWidget *parent) : QWidget(parent), action_buttons_
     connect(money_button_, SIGNAL(clicked()), &mapper, SLOT(map()));
     mapper.setMapping(money_button_, 5);
 
-    connect(&mapper, SIGNAL(mapped(int)), this, SIGNAL(GoToExit(int)));
+    connect(&mapper, SIGNAL(mappedInt(int)), this, SIGNAL(GoToExit(int)));
 
 }

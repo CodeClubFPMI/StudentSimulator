@@ -1,6 +1,7 @@
 #include <QCoreApplication>
 #include <QMap>
 #include <QString>
+#include <QDebug>
 
 #include "student.h"
 #include "Utilities/JSONparser.h"
