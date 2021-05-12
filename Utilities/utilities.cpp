@@ -26,6 +26,17 @@ void menu_buttons::change_buttons_style(QVector<Button *> &buttons, QVBoxLayout 
     layout.setContentsMargins(100, 100, 100, 100);
 }
 
+void menu_buttons::make_buttons_enable(QVector<Button *> &buttons, Student * student){
+    for (int i = 0; i < buttons.size(); ++i){
+        if(buttons[i]->get_available_sem() > student->get_sem_value()){
+            buttons[i]->get_button_ptr()->setEnabled(false);
+        }
+        else{
+            buttons[i]->get_button_ptr()->setEnabled(true);
+        }
+    }
+}
+
 void data_update::refresh_parameters_on_window(QWidget * widget, Student * student){
     dynamic_cast<Parametrs *>(widget)->setFoodCurrentValue(student->get_food_value());
     dynamic_cast<Parametrs *>(widget)->setHealthCurrentValue(student->get_health_value());

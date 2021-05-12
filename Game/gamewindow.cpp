@@ -66,8 +66,13 @@ GameWindow::GameWindow(Game game_config, QWidget *parent) : QWidget(parent), mai
     // add game mode choosing
     student_ = new Student(game_config);
     data_update::refresh_parameters_on_window(parametrs_widget_, student_);
+    menu_buttons::make_buttons_enable(education_menu_->buttons_, student_);
+    menu_buttons::make_buttons_enable(energy_menu_->buttons_, student_);
+    menu_buttons::make_buttons_enable(food_menu_->buttons_, student_);
+    menu_buttons::make_buttons_enable(happiness_menu_->buttons_, student_);
+    menu_buttons::make_buttons_enable(health_menu_->buttons_, student_);
+    menu_buttons::make_buttons_enable(money_menu_->buttons_, student_);
 }
-
 
 void GameWindow::change_index(int i) {
     stacked_widget_.setCurrentIndex(i);
@@ -80,6 +85,9 @@ void GameWindow::change_education_parametrs(int i) {
     student_->change_money_value_(education_menu_->buttons_[i]->get_money_changes());
     student_->change_food_value_(education_menu_->buttons_[i]->get_food_changes());
     student_->change_health_value_(education_menu_->buttons_[i]->get_health_changes());
+    student_->change_day_value_(education_menu_->buttons_[i]->get_day_changes());
+    student_->change_hour_value_(education_menu_->buttons_[i]->get_hour_changes());
+    student_->change_minute_value(education_menu_->buttons_[i]->get_minute_changes());
     data_update::refresh_parameters_on_window(parametrs_widget_, student_);
 }
 
@@ -90,6 +98,9 @@ void GameWindow::change_energy_parametrs(int i) {
     student_->change_money_value_(energy_menu_->buttons_[i]->get_money_changes());
     student_->change_food_value_(energy_menu_->buttons_[i]->get_food_changes());
     student_->change_health_value_(energy_menu_->buttons_[i]->get_health_changes());
+    student_->change_day_value_(energy_menu_->buttons_[i]->get_day_changes());
+    student_->change_hour_value_(energy_menu_->buttons_[i]->get_hour_changes());
+    student_->change_minute_value(energy_menu_->buttons_[i]->get_minute_changes());
     data_update::refresh_parameters_on_window(parametrs_widget_, student_);
 }
 
@@ -100,6 +111,9 @@ void GameWindow::change_food_parametrs(int i) {
     student_->change_money_value_(food_menu_->buttons_[i]->get_money_changes());
     student_->change_food_value_(food_menu_->buttons_[i]->get_food_changes());
     student_->change_health_value_(food_menu_->buttons_[i]->get_health_changes());
+    student_->change_day_value_(food_menu_->buttons_[i]->get_day_changes());
+    student_->change_hour_value_(food_menu_->buttons_[i]->get_hour_changes());
+    student_->change_minute_value(food_menu_->buttons_[i]->get_minute_changes());
     data_update::refresh_parameters_on_window(parametrs_widget_, student_);
 }
 
@@ -110,6 +124,9 @@ void GameWindow::change_happiness_parametrs(int i) {
     student_->change_money_value_(happiness_menu_->buttons_[i]->get_money_changes());
     student_->change_food_value_(happiness_menu_->buttons_[i]->get_food_changes());
     student_->change_health_value_(happiness_menu_->buttons_[i]->get_health_changes());
+    student_->change_day_value_(happiness_menu_->buttons_[i]->get_day_changes());
+    student_->change_hour_value_(happiness_menu_->buttons_[i]->get_hour_changes());
+    student_->change_minute_value(happiness_menu_->buttons_[i]->get_minute_changes());
     data_update::refresh_parameters_on_window(parametrs_widget_, student_);
 }
 
@@ -120,6 +137,9 @@ void GameWindow::change_health_parametrs(int i) {
     student_->change_money_value_(health_menu_->buttons_[i]->get_money_changes());
     student_->change_food_value_(health_menu_->buttons_[i]->get_food_changes());
     student_->change_health_value_(health_menu_->buttons_[i]->get_health_changes());
+    student_->change_day_value_(health_menu_->buttons_[i]->get_day_changes());
+    student_->change_hour_value_(health_menu_->buttons_[i]->get_hour_changes());
+    student_->change_minute_value(health_menu_->buttons_[i]->get_minute_changes());
     data_update::refresh_parameters_on_window(parametrs_widget_, student_);
 }
 
@@ -130,5 +150,8 @@ void GameWindow::change_money_parametrs(int i) {
     student_->change_money_value_(money_menu_->buttons_[i]->get_money_changes());
     student_->change_food_value_(money_menu_->buttons_[i]->get_food_changes());
     student_->change_health_value_(money_menu_->buttons_[i]->get_health_changes());
+    student_->change_day_value_(money_menu_->buttons_[i]->get_day_changes());
+    student_->change_hour_value_(money_menu_->buttons_[i]->get_hour_changes());
+    student_->change_minute_value(money_menu_->buttons_[i]->get_minute_changes());
     data_update::refresh_parameters_on_window(parametrs_widget_, student_);
 }

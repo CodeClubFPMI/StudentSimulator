@@ -17,7 +17,10 @@ namespace menu_buttons{
     void make_buttons(const QString &file_name, QVector<Button *> &buttons, QVBoxLayout &layout);
 
     void add_buttons(QVector<Button *> &buttons, QVBoxLayout &layout);
+    // mb useless
     void change_buttons_style(QVector<Button *> &buttons, QVBoxLayout &layout);
+
+    void make_buttons_enable(QVector<Button *> &buttons, Student *);
 }
 
 // this namespace is for displaying current data on window

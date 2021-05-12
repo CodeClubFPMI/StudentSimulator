@@ -8,6 +8,9 @@
                 "education" : -5, 
                 "health" : -5, 
                 "energy" : -2,
+                "day" : 123,
+                "time_hour": 15,
+                "time_minute" : 22,
                 "sem" : 1
             }
     },
@@ -20,6 +23,9 @@
                 "education" : -2, 
                 "health" : 2, 
                 "energy" : -10,
+                "day" : 123,
+                "time_hour": 15,
+                "time_minute" : 22,
                 "sem" : 1
             }
     },
@@ -32,6 +38,9 @@
                 "education" : 5, 
                 "health" : 0, 
                 "energy" : -10,
+                "day" : 123,
+                "time_hour": 15,
+                "time_minute" : 22,
                 "sem" : 1
             }
     },
@@ -44,7 +53,10 @@
                 "education" : -8, 
                 "health" : -10, 
                 "energy" : -10,
-                "sem" : 1
+                "day" : 123,
+                "time_hour": 15,
+                "time_minute" : 22,
+                "sem" : 2
             }
     },
     {
@@ -56,7 +68,10 @@
                 "education" : 0, 
                 "health" : 0, 
                 "energy" : -5,
-                "sem" : 1
+                "day" : 123,
+                "time_hour": 15,
+                "time_minute" : 22,
+                "sem" : 2
             }
     },
     {
@@ -68,7 +83,10 @@
                 "education" : -5, 
                 "health" : -5, 
                 "energy" : -20,
-                "sem" : 2
+                "day" : 123,
+                "time_hour": 15,
+                "time_minute" : 22,
+                "sem" : 3
             }
     },
     {
@@ -80,7 +98,10 @@
                 "education" : 0, 
                 "health" : -5, 
                 "energy" : -15,
-                "sem" : 2
+                "day" : 123,
+                "time_hour": 15,
+                "time_minute" : 22,
+                "sem" : 1
             }
     },
     {
@@ -92,6 +113,9 @@
                 "education" : -10, 
                 "health" : -15, 
                 "energy" : -25,
+                "day" : 123,
+                "time_hour": 15,
+                "time_minute" : 22,
                 "sem" : 3
             }
     },
@@ -104,6 +128,9 @@
                 "education" : -20, 
                 "health" : 30, 
                 "energy" : -50,
+                "day" : 123,
+                "time_hour": 15,
+                "time_minute" : 22,
                 "sem" : 6
             }
     }

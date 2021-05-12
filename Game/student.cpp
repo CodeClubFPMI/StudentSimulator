@@ -30,6 +30,13 @@ Student::Student(Game game)
     qDebug() << sem_;
     qDebug() << day_;
     qDebug() << time_;
+    /*
+    time_ = time_.addSecs(3600);
+    time_.setHMS(time_.hour() + 10, time_.minute() + 30, time_.second());
+    time_ = time_.addSecs(3600);
+
+    qDebug() << time_;
+    */
 }
 
 // TODO parser
@@ -108,6 +115,23 @@ void Student::change_education_value_(int increase_arg){
 }
 void Student::change_money_value_(qreal increase_arg){
     money_ += increase_arg;
+}
+
+void Student::change_day_value_(int day){
+    day_ += day;
+}
+
+void Student::change_hour_value_(int hour){
+    if(time_.hour() + hour >= 24){
+        ++day_;
+    }
+    time_ = time_.addSecs(hour * 60 * 60);
+}
+void Student::change_minute_value(int minute){
+    if(time_.hour() * 60 + time_.minute() + minute >= 1440){
+        ++day_;
+    }
+    time_ = time_.addSecs(minute * 60);
 }
 
 
