@@ -9,12 +9,6 @@ GameWindow::GameWindow(Game game_config, QWidget *parent) : QWidget(parent), mai
     //load widget with parametrs of student
     parametrs_widget_ = new Parametrs;
 
-
-    // student and menues
-    // add game mode choosing
-    student_ = new Student(game_config);
-    data_update::refresh_parameters_on_window(parametrs_widget_, student_);
-
     //get style sheets for buttons
     QFile file(":/Styles/MainMenuStyles.css");
     file.open(QFile::ReadOnly);

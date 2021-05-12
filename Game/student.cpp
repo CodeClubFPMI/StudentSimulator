@@ -47,17 +47,6 @@ Student::Student(Game game)
     qDebug() << sem_;
     qDebug() << day_;
     qDebug() << time_;
-<<<<<<< HEAD
-    qDebug() << name_;
-=======
-    /*
-    time_ = time_.addSecs(3600);
-    time_.setHMS(time_.hour() + 10, time_.minute() + 30, time_.second());
-    time_ = time_.addSecs(3600);
-
-    qDebug() << time_;
-    */
->>>>>>> 4fb8d4181bcc9d2accd24d4aa07269c36dfd3201
 }
 
 // TODO parser
