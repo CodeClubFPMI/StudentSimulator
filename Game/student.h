@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <QString>
+#include <QInputDialog>
 #include <QTime>
 
 enum Game{
@@ -25,6 +26,7 @@ public:
     int get_day();
     qreal get_money_value();
     QTime get_time();
+    QString get_name();
 
 signals:
     // when one of the properties (except of money) drops to 0, student dies :(
@@ -58,6 +60,7 @@ private:
    // this propertie is for saving the term. The actions available to the user depend on this
    int sem_;
 
+   QString name_;
    int day_;
    QTime time_;
 };

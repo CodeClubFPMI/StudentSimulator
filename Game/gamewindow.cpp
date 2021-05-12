@@ -59,6 +59,7 @@ GameWindow::GameWindow(Game game_config, QWidget *parent) : QWidget(parent), mai
     // student and menues
     // add game mode choosing
     student_ = new Student(game_config);
+
     data_update::refresh_parameters_on_window(parametrs_widget_, student_);
 }
 
@@ -125,4 +126,8 @@ void GameWindow::change_money_parametrs(int i) {
     student_->change_food_value_(money_menu_->buttons_[i]->get_food_changes());
     student_->change_health_value_(money_menu_->buttons_[i]->get_health_changes());
     data_update::refresh_parameters_on_window(parametrs_widget_, student_);
+}
+
+Student* GameWindow::get_student_ptr(){
+    return student_;
 }

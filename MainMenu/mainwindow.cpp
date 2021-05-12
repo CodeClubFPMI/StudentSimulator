@@ -29,6 +29,7 @@ MainWindow::MainWindow(QWidget *parent)
       game_window_->setStyleSheet(file.readAll());
       stacked_widget_.addWidget(game_window_);
       stacked_widget_.setCurrentIndex(3);
+      setWindowTitle(game_window_->get_student_ptr()->get_name());
       file.close();
     };
 
@@ -39,6 +40,7 @@ MainWindow::MainWindow(QWidget *parent)
         game_window_->setStyleSheet(file.readAll());
         stacked_widget_.addWidget(game_window_);
         stacked_widget_.setCurrentIndex(3);
+        setWindowTitle(game_window_->get_student_ptr()->get_name());
         file.close();
     };
 

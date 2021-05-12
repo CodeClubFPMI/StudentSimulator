@@ -11,16 +11,33 @@ Student::Student(Game game)
     QString file_name;
     // TODO correct file path
     switch(game){
-    case 0:
+    case 0:{
         file_name = "new_game.json";
+        set_student_config(file_name);
+        //ask name from a user
+        bool bOk;
+        QString str = QInputDialog::getText( 0,
+                                             "Hello!",
+                                             "Enter your name:",
+                                             QLineEdit::Normal,
+                                             "User name",
+                                             &bOk
+                                            );
+        name_ = str;
+        if (!bOk || name_ == "") {
+            name_ = "Anonymus";
+        }
         break;
+    }
     case 1:
         file_name = "saved_game.json";
+        set_student_config(file_name);
         break;
     default:
         break;
     }
-    set_student_config(file_name);
+
+
     qDebug() << food_;
     qDebug() << energy_;
     qDebug() << health_;
@@ -30,6 +47,7 @@ Student::Student(Game game)
     qDebug() << sem_;
     qDebug() << day_;
     qDebug() << time_;
+    qDebug() << name_;
 }
 
 // TODO parser
@@ -46,6 +64,7 @@ void Student::set_student_config(const QString &file_name){
     day_ = configs.value("day").toInt();
     time_.setHMS(configs.value("time_hour").toInt(),
                  configs.value("time_minute").toInt(), 0, 0);
+    name_ = configs.value("user_name").toString();
     //time_.
 }
 
@@ -88,6 +107,10 @@ qreal Student::get_money_value(){
 
 QTime Student::get_time(){
     return time_;
+}
+
+QString Student::get_name(){
+    return name_;
 }
 
 void Student::change_food_value_(int increase_arg){

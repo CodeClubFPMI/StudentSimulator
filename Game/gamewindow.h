@@ -24,6 +24,7 @@ class GameWindow : public QWidget
     Q_OBJECT
 public:
     explicit GameWindow(Game game_config, QWidget *parent = nullptr);
+    Student* get_student_ptr();
 
 public slots:
     void change_index(int i);
