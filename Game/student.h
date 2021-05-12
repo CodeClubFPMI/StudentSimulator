@@ -33,20 +33,13 @@ signals:
 
     // TODO connect them
 public slots:
-    void raise_food_value_(int increase_arg);
-    void raise_energy_value_(int increase_arg);
-    void raise_health_value_(int increase_arg);
-    void raise_happiness_value_(int increase_arg);
-    void raise_education_value_(int increase_arg);
-    void raise_money_value_(qreal increase_arg);
+    void change_food_value_(int increase_arg);
+    void change_energy_value_(int increase_arg);
+    void change_health_value_(int increase_arg);
+    void change_happiness_value_(int increase_arg);
+    void change_education_value_(int increase_arg);
+    void change_money_value_(qreal increase_arg);
 
-    void reduce_food_value_(int reduce_arg);
-    void reduce_energy_value_(int reduce_arg);
-    void reduce_health_value_(int reduce_arg);
-    void reduce_happiness_value_(int reduce_arg);
-    void reduce_education_value_(int reduce_arg);
-    // !!! control over whether a student has enough money DOES NOT lie with the slot !!!
-    void reduce_money_value_(qreal reduce_arg);
 private:
    // this method sets properties, read from file
    void set_student_config(const QString &file_path);
