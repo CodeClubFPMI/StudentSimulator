@@ -28,3 +28,12 @@ qreal Button::get_money_changes(){
 QPushButton * Button::get_button_ptr(){
     return button_;
 }
+int Button::get_day_changes(){
+    return day_;
+}
+int Button::get_hour_changes(){
+    return hour_;
+}
+int Button::get_minute_changes(){
+    return minute_;
+}

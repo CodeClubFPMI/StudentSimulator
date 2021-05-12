@@ -36,6 +36,8 @@ public slots:
     void change_happiness_parametrs(int i);
 
 private:
+    void change_parametrs(QWidget * menu_, int i);
+
     QVBoxLayout main_layout_;
     QStackedWidget stacked_widget_;
     QHBoxLayout buff_buttons_layout_;

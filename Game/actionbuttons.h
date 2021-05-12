@@ -23,7 +23,7 @@ private:
     QPushButton * money_button_;
     QPushButton * health_button_;
     QPushButton * energy_button_;
-    QSignalMapper mapper;
+    QSignalMapper * mapper;
 };
 
 #endif // ACTIONBUTTONS_H

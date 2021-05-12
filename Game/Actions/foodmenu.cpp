@@ -10,6 +10,7 @@ FoodMenu::FoodMenu(QWidget *parent) : QWidget(parent)
     // TODO scrollBar (or Area, I don't know)
 
     menu_buttons::make_buttons("food_buttons.json", buttons_, layout_);
+
     mapper_ = new QSignalMapper;
 
     for (int i = 0; i < buttons_.size(); ++i) {

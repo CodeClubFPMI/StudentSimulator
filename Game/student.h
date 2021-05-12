@@ -40,6 +40,9 @@ public slots:
     void change_health_value_(int increase_arg);
     void change_happiness_value_(int increase_arg);
     void change_education_value_(int increase_arg);
+    void change_day_value_(int increase_arg);
+    void change_hour_value_(int);
+    void change_minute_value(int);
     void change_money_value_(qreal increase_arg);
 
 private:
