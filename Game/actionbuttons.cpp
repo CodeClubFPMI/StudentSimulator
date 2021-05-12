@@ -2,6 +2,7 @@
 
 ActionButtons::ActionButtons(QWidget *parent) : QWidget(parent), action_buttons_layout_(this)
 {
+    mapper = new QSignalMapper();
     //create action buttons and add to layout
     health_button_ = new QPushButton;
     health_button_->setText("Health");
@@ -40,24 +41,24 @@ ActionButtons::ActionButtons(QWidget *parent) : QWidget(parent), action_buttons_
     action_buttons_layout_.addWidget(money_button_, 1);
 
     //connects which change action buttons
-    connect(health_button_, SIGNAL(clicked()), &mapper, SLOT(map()));
-    mapper.setMapping(health_button_, 0);
+    connect(health_button_, SIGNAL(clicked()), mapper, SLOT(map()));
+    mapper->setMapping(health_button_, 0);
 
-    connect(energy_button_, SIGNAL(clicked()), &mapper, SLOT(map()));
-    mapper.setMapping(energy_button_, 1);
+    connect(energy_button_, SIGNAL(clicked()), mapper, SLOT(map()));
+    mapper->setMapping(energy_button_, 1);
 
-    connect(education_button_, SIGNAL(clicked()), &mapper, SLOT(map()));
-    mapper.setMapping(education_button_, 2);
+    connect(education_button_, SIGNAL(clicked()), mapper, SLOT(map()));
+    mapper->setMapping(education_button_, 2);
 
-    connect(food_button_, SIGNAL(clicked()), &mapper, SLOT(map()));
-    mapper.setMapping(food_button_, 3);
+    connect(food_button_, SIGNAL(clicked()), mapper, SLOT(map()));
+    mapper->setMapping(food_button_, 3);
 
-    connect(happiness_button_, SIGNAL(clicked()), &mapper, SLOT(map()));
-    mapper.setMapping(happiness_button_, 4);
+    connect(happiness_button_, SIGNAL(clicked()), mapper, SLOT(map()));
+    mapper->setMapping(happiness_button_, 4);
 
-    connect(money_button_, SIGNAL(clicked()), &mapper, SLOT(map()));
-    mapper.setMapping(money_button_, 5);
+    connect(money_button_, SIGNAL(clicked()), mapper, SLOT(map()));
+    mapper->setMapping(money_button_, 5);
 
-    connect(&mapper, SIGNAL(mapped(int)), this, SIGNAL(GoToExit(int)));
+    connect(mapper, SIGNAL(mappedInt(int)), this, SIGNAL(GoToExit(int)));
 
 }
