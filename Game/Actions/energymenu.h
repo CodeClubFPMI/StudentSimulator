@@ -5,6 +5,7 @@
 
 #include <QWidget>
 #include <QVBoxLayout>
+#include <QSignalMapper>
 #include <QVector>
 
 class EnergyMenu : public QWidget
@@ -12,12 +13,13 @@ class EnergyMenu : public QWidget
     Q_OBJECT
 public:
     explicit EnergyMenu(QWidget *parent = nullptr);
+    QVector<Button *> buttons_;
 
 signals:
-
+    void SendButtonId(int);
 private:
     QVBoxLayout layout_;
-    QVector<Button *> buttons_;
+    QSignalMapper * mapper_;
 
 };
 

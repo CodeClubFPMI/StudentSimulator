@@ -11,3 +11,7 @@ QPushButton:hover {
     border: 3px solid black;
     background-color: skyblue;
 }
+
+QPushButton:disabled {
+    background-color: lightgray;
+}

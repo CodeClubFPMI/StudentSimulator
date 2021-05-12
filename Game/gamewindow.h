@@ -27,6 +27,12 @@ public:
 
 public slots:
     void change_index(int i);
+    void change_education_parametrs(int i);
+    void change_money_parametrs(int i);
+    void change_food_parametrs(int i);
+    void change_health_parametrs(int i);
+    void change_energy_parametrs(int i);
+    void change_happiness_parametrs(int i);
 
 private:
     QVBoxLayout main_layout_;

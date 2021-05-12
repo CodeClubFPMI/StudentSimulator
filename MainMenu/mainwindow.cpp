@@ -56,10 +56,10 @@ MainWindow::MainWindow(QWidget *parent)
 
 
     //choose settings menu
-    connect(main_menu_, &MainMenu::GoToStatistic, [&](){stacked_widget_.setCurrentIndex(2); });
+    connect(main_menu_, &MainMenu::GoToStatistic, [&](){stacked_widget_.setCurrentIndex(1); });
 
     //choose settings menu
-    connect(main_menu_, &MainMenu::GoToSettings, [&](){stacked_widget_.setCurrentIndex(3); } );
+    connect(main_menu_, &MainMenu::GoToSettings, [&](){stacked_widget_.setCurrentIndex(2); } );
 
 }
 

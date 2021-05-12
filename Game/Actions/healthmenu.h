@@ -6,18 +6,20 @@
 #include <QWidget>
 #include <QVBoxLayout>
 #include <QVector>
+#include <QSignalMapper>
 
 class HealthMenu : public QWidget
 {
     Q_OBJECT
 public:
     explicit HealthMenu(QWidget *parent = nullptr);
+    QVector<Button *> buttons_;
 
 signals:
-
+    void SendButtonId(int);
 private:
     QVBoxLayout layout_;
-    QVector<Button *> buttons_;
+    QSignalMapper * mapper_;
 
 };
 
