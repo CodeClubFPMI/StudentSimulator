@@ -9,7 +9,6 @@
 Student::Student(Game game)
 {
     QString file_name;
-    // TODO correct file path
     switch(game){
     case 0:{
         file_name = "new_game.json";

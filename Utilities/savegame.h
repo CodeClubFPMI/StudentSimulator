@@ -11,7 +11,7 @@ class SaveGame
 public:
     SaveGame() = default;
     ~SaveGame() = default;
-    bool save_game_to_JSON(Student * player, QString file_name = "load_game_config.json");
+    void save_game_to_JSON(Student * player, QString file_name = "saved_game.json");
 };
 
 #endif // SAVEGAME_H

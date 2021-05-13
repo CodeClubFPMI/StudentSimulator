@@ -4,118 +4,118 @@
             {   
                 "food" : 10, 
                 "money" : -0.7, 
-                "happiness" : 1, 
-                "education" : 0 , 
-                "health" : -5 , 
+                "happiness" : -10, 
+                "education" : 0, 
+                "health" : -10, 
                 "energy" : -2,
-                "day" : 123,
-                "time_hour": 15,
-                "time_minute" : 22,
+                "day" : 0,
+                "time_hour": 0,
+                "time_minute" : 25,
                 "sem" : 1
             }
     },
     {
         "Stop for a shawarma" :
             {
-                "food" : 10, 
-                "money" : -0.7, 
-                "happiness" : -1, 
-                "education" : 0 , 
-                "health" : -5 , 
+                "food" : 15, 
+                "money" : -4.5, 
+                "happiness" : 5, 
+                "education" : 0, 
+                "health" : -5, 
                 "energy" : -2,
-                "day" : 123,
-                "time_hour": 15,
-                "time_minute" : 22,
+                "day" : 0,
+                "time_hour": 0,
+                "time_minute" : 45,
                 "sem" : 1
             }
     },
     {
         "Go to the canteen" :
             {
-                "food" : 10, 
-                "money" : -0.7, 
-                "happiness" : 1, 
-                "education" : 0 , 
-                "health" : -5 , 
-                "energy" : -2,
-                "day" : 123,
-                "time_hour": 15,
-                "time_minute" : 22,
+                "food" : 30, 
+                "money" : -3, 
+                "happiness" : 0, 
+                "education" : 0, 
+                "health" : 0, 
+                "energy" : -5,
+                "day" : 0,
+                "time_hour": 1,
+                "time_minute" : 0,
                 "sem" : 1
             }
     },
     {
         "Go to a fast food" :
             {
-                "food" : 10, 
-                "money" : -0.7, 
-                "happiness" : -1, 
+                "food" : 35, 
+                "money" : -10, 
+                "happiness" : 7, 
                 "education" : 0 , 
-                "health" : -5 , 
-                "energy" : -2,
-                "day" : 123,
-                "time_hour": 15,
-                "time_minute" : 22,
+                "health" : -8, 
+                "energy" : -7,
+                "day" : 0,
+                "time_hour": 1,
+                "time_minute" : 30,
                 "sem" : 2
             }
     },
     {
         "Get some pizza" :
             {
-                "food" : 10, 
-                "money" : -0.7, 
-                "happiness" : -1, 
-                "education" : 0 , 
-                "health" : -5 , 
-                "energy" : -2,
-                "day" : 123,
-                "time_hour": 15,
-                "time_minute" : 22,
+                "food" : 45, 
+                "money" : -12, 
+                "happiness" : 8, 
+                "education" : 0, 
+                "health" : -8, 
+                "energy" : -10,
+                "day" : 0,
+                "time_hour": 2,
+                "time_minute" : 0,
                 "sem" : 2
             }
     },
     {
         "Go to a cafe" :
             {
-                "food" : 10, 
-                "money" : -0.7, 
-                "happiness" : -1, 
+                "food" : 40, 
+                "money" : -7, 
+                "happiness" : 10, 
                 "education" : 0 , 
-                "health" : -5 , 
-                "energy" : -2,
-                "day" : 123,
-                "time_hour": 15,
-                "time_minute" : 22,
+                "health" : 0, 
+                "energy" : -8,
+                "day" : 0,
+                "time_hour": 2,
+                "time_minute" : 30,
                 "sem" : 4
             }
     },
     {
         "Go to a restaurant" :
             {
-                "food" : 10, 
-                "money" : -0.7, 
-                "happiness" : 1, 
+                "food" : 60, 
+                "money" : -30, 
+                "happiness" : 15, 
                 "education" : 0 , 
-                "health" : -5 , 
-                "energy" : -2,
-                "day" : 123,
-                "time_hour": 15,
-                "time_minute" : 22,
+                "health" : 0, 
+                "energy" : -10,
+                "day" : 0,
+                "time_hour": 3,
+                "time_minute" : 30,
                 "sem" : 5
             }
     },
     {
         "Private chef" :
             {
-                "food" : 10, 
-                "money" : -0.7, 
-                "happiness" : 1, 
-                "education" : 0 , 
-                "health" : -5 , 
-                "energy" : -2,
-                "day" : 123,
-                "time_hour": 15,
-                "time_minute" : 22,
+                "food" : 70, 
+                "money" : -80, 
+                "happiness" : 20, 
+                "education" : 0, 
+                "health" : 5, 
+                "energy" : 0,
+                "day" : 0,
+                "time_hour": 0,
+                "time_minute" : 45,
                 "sem" : 6
             }
     }

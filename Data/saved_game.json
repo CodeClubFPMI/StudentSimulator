@@ -9,5 +9,5 @@
     "day" : 123,
     "time_hour": 15,
     "time_minute": 22,
-    "user_name": "Player"
+    "name": "Player"
 }
