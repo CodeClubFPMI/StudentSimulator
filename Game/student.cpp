@@ -25,7 +25,7 @@ Student::Student(Game game)
                                             );
         name_ = str;
         if (!bOk || name_ == "") {
-            name_ = "Anonymus";
+            name_ = "Vaaan";
         }
         break;
     }

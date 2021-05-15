@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "settings.h"
 
+#include <QTimer>
+#include <QDebug>
 #include <QFile>
 #include "Game/foodmenu.h"
 
@@ -11,8 +13,19 @@ MainWindow::MainWindow(QWidget *parent)
     main_menu_ = new MainMenu;
     settings_ = new Settings;
     statistic_ = new Statistic;
+   // game_window_ = new GameWindow(Game::LOAD_GAME);
 
     resize(800, 1000);
+
+    //set background
+    QPixmap bkgnd1(":/images/background1.png");
+    bkgnd1 = bkgnd1.scaled(size(), Qt::IgnoreAspectRatio);
+    QPalette p = palette(); //copy current, not create new
+    p.setBrush(QPalette::Background, bkgnd1);
+    setPalette(p);
+
+
+
 
     stacked_widget_.addWidget(main_menu_);
     //stacked_widget_.setCurrentIndex(2);
@@ -23,7 +36,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     //lamda for choose new game window
     auto choose_new_game=[&](){
-      game_window_ = new GameWindow(Game::NEW_GAME);
+      game_window_ = new GameWindow(Game::NEW_GAME, this);
       QFile file(":/Styles/GameMenuStyles.css");
       file.open(QFile::ReadOnly);
       game_window_->setStyleSheet(file.readAll());
@@ -34,7 +47,7 @@ MainWindow::MainWindow(QWidget *parent)
     };
 
     auto choose_load_game=[&](){
-        game_window_ = new GameWindow(Game::LOAD_GAME);
+        game_window_ = new GameWindow(Game::LOAD_GAME, this);
         QFile file(":/Styles/GameMenuStyles.css");
         file.open(QFile::ReadOnly);
         game_window_->setStyleSheet(file.readAll());
@@ -48,7 +61,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(main_menu_, &MainMenu::GoToExit, [&](){this->close();});
 
     //back to main menu
-    connect(settings_, &Settings::GoToMainMenu, this, [&](){stacked_widget_.setCurrentIndex(0); });
+    connect(settings_, &Settings::GoToMainMenu, [&](){stacked_widget_.setCurrentIndex(0); });
     connect(statistic_, &Statistic::GoToMainMenu, [&](){stacked_widget_.setCurrentIndex(0); });
 
     //choose new game

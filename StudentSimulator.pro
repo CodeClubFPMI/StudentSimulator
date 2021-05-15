@@ -16,6 +16,7 @@ SOURCES += \
     Game/Actions/happinessmenu.cpp \
     Game/Actions/healthmenu.cpp \
     Game/Actions/moneymenu.cpp \
+    Game/escmenu.cpp \
     Utilities/JSONparser.cpp \
     Utilities/button.cpp \
     Game/Actions/foodmenu.cpp \
@@ -37,6 +38,7 @@ HEADERS += \
     Game/Actions/happinessmenu.h \
     Game/Actions/healthmenu.h \
     Game/Actions/moneymenu.h \
+    Game/escmenu.h \
     Utilities/JSONparser.h \
     Utilities/button.h \
     Game/Actions/foodmenu.h \
@@ -60,3 +62,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     Resources/Resources.qrc
+
+DISTFILES += \
+    ../../background1.png

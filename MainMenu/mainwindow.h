@@ -16,9 +16,10 @@ class MainWindow : public QWidget
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    QStackedWidget stacked_widget_;
 
 private:
-    QStackedWidget stacked_widget_;
+
     GameWindow * game_window_;
     MainMenu * main_menu_;
     Settings * settings_;

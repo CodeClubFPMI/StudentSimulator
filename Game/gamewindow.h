@@ -8,7 +8,10 @@
 #include <QHBoxLayout>
 #include <QGridLayout>
 #include <QFile>
+#include <QDialog>
+#include <QTimer>
 #include <QPushButton>
+#include <QKeyEvent>
 #include "Game/parametrs.h"
 #include "Game/actionbuttons.h"
 #include "Game/student.h"
@@ -18,6 +21,9 @@
 #include "Actions/foodmenu.h"
 #include "Actions/happinessmenu.h"
 #include "Actions/moneymenu.h"
+#include "Utilities/savegame.h"
+#include "Utilities/utilities.h"
+#include "escmenu.h"
 
 class GameWindow : public QWidget
 {
@@ -34,6 +40,11 @@ public slots:
     void change_health_parametrs(int i);
     void change_energy_parametrs(int i);
     void change_happiness_parametrs(int i);
+    void add_minute();
+    void save_game();
+    void back_to_menu_and_save();
+    void exit_and_save();
+
 
 private:
     void change_parametrs(QWidget * menu_, int i);
@@ -42,6 +53,10 @@ private:
     QStackedWidget stacked_widget_;
     QHBoxLayout buff_buttons_layout_;
 
+    EscMenu * esc_menu_;
+
+    QTimer * timer_;
+    QWidget * void_widget_;
     HealthMenu * health_menu_;
     EnergyMenu * energy_menu_;
     EducationMenu * education_menu_;
@@ -51,6 +66,9 @@ private:
     ActionButtons * action_buttons_widget_;
     Parametrs * parametrs_widget_;
     Student * student_;
+
+protected:
+    virtual void keyPressEvent(QKeyEvent *event);
 };
 
 #endif // GAMEWINDOW_H

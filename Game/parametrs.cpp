@@ -43,6 +43,11 @@ Parametrs::Parametrs(QWidget *parent) : QWidget(parent), parametrs_layout_(this)
     parametrs_layout_.addWidget(money_label, 3, 3);
     money_label->setAlignment(Qt::AlignHCenter);
 
+
+    QLabel * border = new QLabel;
+    border->setStyleSheet("QLabel { border: 5px solid black; background-color: cyan}");
+    parametrs_layout_.addWidget(border, 1, 4, 3, 1);
+
     time_label = new QLabel;
     parametrs_layout_.addWidget(time_label, 3, 4);
     time_label->setAlignment(Qt::AlignHCenter);
@@ -55,9 +60,6 @@ Parametrs::Parametrs(QWidget *parent) : QWidget(parent), parametrs_layout_(this)
     parametrs_layout_.addWidget(day_label, 2, 4);
     day_label->setAlignment(Qt::AlignHCenter);
 
-    QLabel * border = new QLabel;
-    border->setStyleSheet("QLabel { border: 5px solid red;}");
-    parametrs_layout_.addWidget(border, 1, 4, 3, 1);
 }
 
 void Parametrs::setFoodCurrentValue(int value){

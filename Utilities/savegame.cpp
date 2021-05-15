@@ -4,7 +4,7 @@
 #include <QJsonDocument>
 #include <QFile>
 
-bool SaveGame::save_game_to_JSON(Student *player, QString file_name){
+void SaveGame::save_game_to_JSON(Student *player, QString file_name){
     QJsonObject toRecordObject;
     toRecordObject.insert("food", QJsonValue::fromVariant(player->get_food_value()));
     toRecordObject.insert("money", QJsonValue::fromVariant(player->get_money_value()));
@@ -16,7 +16,7 @@ bool SaveGame::save_game_to_JSON(Student *player, QString file_name){
 
     QFile save_file;
     QString file_path = PRO_FILE_PWD;
-    file_path += "\\Data";
+    file_path += "//Data//";
     file_path += file_name;
     save_file.setFileName(file_path);
     if(save_file.open(QIODevice::WriteOnly)){
@@ -25,5 +25,4 @@ bool SaveGame::save_game_to_JSON(Student *player, QString file_name){
         qDebug() << "Error with saving game!";
     }
     save_file.close();
-    return 1;
 }
