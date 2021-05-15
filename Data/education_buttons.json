@@ -4,58 +4,58 @@
             {
                 "food" : -5, 
                 "money" : 0, 
-                "happiness" : 8, 
+                "happiness" : -2, 
                 "education" : 5, 
-                "health" : -5, 
-                "energy" : -5,
-                "day" : 123,
-                "time_hour": 15,
-                "time_minute" : 22,
+                "health" : 0, 
+                "energy" : -7,
+                "day" : 0,
+                "time_hour": 1,
+                "time_minute" : 20,
                 "sem" : 1
             }
     },
     {
         "Read lectures" : 
             {
-                "food" : -5, 
+                "food" : -7, 
                 "money" : 0, 
-                "happiness" : 8, 
-                "education" : -5, 
-                "health" : -5, 
-                "energy" : -2,
-                "day" : 123,
-                "time_hour": 15,
-                "time_minute" : 22,
+                "happiness" : 0, 
+                "education" : 8, 
+                "health" : 0, 
+                "energy" : -5,
+                "day" : 0,
+                "time_hour": 1,
+                "time_minute" : 30,
                 "sem" : 1
             }
     },
     {
         "Do your homework" : 
             {
-                "food" : -5, 
+                "food" : -8, 
                 "money" : 0, 
-                "happiness" : 8, 
-                "education" : -5, 
-                "health" : -5, 
-                "energy" : -2,
-                "day" : 123,
-                "time_hour": 15,
-                "time_minute" : 22,
+                "happiness" : -3, 
+                "education" : 10, 
+                "health" : 0, 
+                "energy" : -8,
+                "day" : 0,
+                "time_hour": 3,
+                "time_minute" : 0,
                 "sem" : 1
             }
     },
     {
         "Making a lab" : 
             {
-                "food" : -5, 
+                "food" : -9, 
                 "money" : 0, 
-                "happiness" : 8, 
-                "education" : -5, 
-                "health" : -5, 
-                "energy" : -2,
-                "day" : 123,
-                "time_hour": 15,
-                "time_minute" : 22,
+                "happiness" : -4, 
+                "education" : 15, 
+                "health" : 0, 
+                "energy" : -9,
+                "day" : 0,
+                "time_hour": 3,
+                "time_minute" : 30,
                 "sem" : 1
             }
     },
@@ -64,74 +64,74 @@
             {
                 "food" : -5, 
                 "money" : 0, 
-                "happiness" : 8, 
-                "education" : -5, 
-                "health" : -5, 
-                "energy" : -2,
-                "day" : 123,
-                "time_hour": 15,
-                "time_minute" : 22,
+                "happiness" : 0, 
+                "education" : 10, 
+                "health" : 0, 
+                "energy" : -5,
+                "day" : 0,
+                "time_hour": 2,
+                "time_minute" : 0,
                 "sem" : 1
             }
     },
     {
         "Prepare for the exam" : 
             {
-                "food" : -5, 
+                "food" : -10, 
                 "money" : 0, 
-                "happiness" : 8, 
-                "education" : -5, 
-                "health" : -5, 
-                "energy" : -2,
-                "day" : 123,
-                "time_hour": 15,
-                "time_minute" : 22,
+                "happiness" : -6, 
+                "education" : 18, 
+                "health" : 0, 
+                "energy" : -10,
+                "day" : 0,
+                "time_hour": 3,
+                "time_minute" : 0,
                 "sem" : 1
             }
     },
     {
         "Buy a lab" : 
             {
-                "food" : -5, 
-                "money" : 0, 
-                "happiness" : 8, 
-                "education" : -5, 
-                "health" : -5, 
-                "energy" : -2,
-                "day" : 123,
-                "time_hour": 15,
-                "time_minute" : 22,
-                "sem" : 1
+                "food" : 0, 
+                "money" : -15, 
+                "happiness" : 5, 
+                "education" : 10, 
+                "health" : 0, 
+                "energy" : 0,
+                "day" : 0,
+                "time_hour": 0,
+                "time_minute" : 10,
+                "sem" : 3
             }
     },
     {
         "Sign up for a courses" : 
             {
-                "food" : -5, 
-                "money" : 0, 
-                "happiness" : 8, 
-                "education" : -5, 
-                "health" : -5, 
-                "energy" : -2,
-                "day" : 123,
-                "time_hour": 15,
-                "time_minute" : 22,
-                "sem" : 1
+                "food" : -10, 
+                "money" : -200, 
+                "happiness" : 2, 
+                "education" : 65, 
+                "health" : 0, 
+                "energy" : -20,
+                "day" : 7,
+                "time_hour": 0,
+                "time_minute": 0,
+                "sem" : 4
             }
     },
     {
         "Write a diploma" : 
             {
-                "food" : -5, 
-                "money" : 0, 
-                "happiness" : 8, 
-                "education" : -5, 
-                "health" : -5, 
-                "energy" : -2,
-                "day" : 123,
-                "time_hour": 15,
-                "time_minute" : 22,
-                "sem" : 1
+                "food" : -40, 
+                "money" : -50, 
+                "happiness" : -10, 
+                "education" : 100, 
+                "health" : -10, 
+                "energy" : -40,
+                "day" : 14,
+                "time_hour": 0,
+                "time_minute" : 0,
+                "sem" : 8
             }
     }
 ]

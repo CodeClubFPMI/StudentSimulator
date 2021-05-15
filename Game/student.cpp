@@ -9,7 +9,6 @@
 Student::Student(Game game)
 {
     QString file_name;
-    // TODO correct file path
     switch(game){
     case 0:{
         file_name = "new_game.json";
@@ -63,7 +62,7 @@ void Student::set_student_config(const QString &file_name){
     day_ = configs.value("day").toInt();
     time_.setHMS(configs.value("time_hour").toInt(),
                  configs.value("time_minute").toInt(), 0, 0);
-    name_ = configs.value("user_name").toString();
+    name_ = configs.value("name").toString();
     //time_.
 }
 
