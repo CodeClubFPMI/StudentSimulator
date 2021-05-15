@@ -1,13 +1,13 @@
 {
+    "day": 123,
     "education": 55,
     "energy": 0,
     "food": 100,
     "happiness": 93,
     "health": 0,
     "money": 0,
+    "name": "Player",
     "sem": 2,
-    "day" : 123,
     "time_hour": 15,
-    "time_minute": 22,
-    "name": "Player"
+    "time_minute": 28
 }
