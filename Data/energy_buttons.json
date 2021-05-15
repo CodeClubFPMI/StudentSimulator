@@ -2,76 +2,76 @@
     {
         "Go to sleep" :
             {
-                "food" : -10, 
+                "food" : -15, 
                 "money" : 0, 
-                "happiness" : 15, 
-                "education" : -2, 
+                "happiness" : 2, 
+                "education" : 0, 
                 "health" : 2, 
-                "energy" : -10,
-                "day" : 123,
-                "time_hour": 15,
-                "time_minute" : 22,
+                "energy" : 40,
+                "day" : 0,
+                "time_hour": 8,
+                "time_minute" : 0,
                 "sem" : 1
             }
     },
     {
         "Have a coffee" :
             {
-                "food" : -10, 
-                "money" : 0, 
-                "happiness" : 15, 
-                "education" : -2, 
-                "health" : 2, 
-                "energy" : -10,
-                "day" : 123,
-                "time_hour": 15,
-                "time_minute" : 22,
+                "food" : 0, 
+                "money" : -1.5, 
+                "happiness" : 3, 
+                "education" : 0, 
+                "health" : 0, 
+                "energy" : 15,
+                "day" : 0,
+                "time_hour": 0,
+                "time_minute" : 10,
                 "sem" : 1
             }
     },
     {
         "Sleeping in classes" :
             {
-                "food" : -10, 
+                "food" : -8, 
                 "money" : 0, 
-                "happiness" : 15, 
-                "education" : -2, 
-                "health" : 2, 
-                "energy" : -10,
-                "day" : 123,
-                "time_hour": 15,
-                "time_minute" : 22,
+                "happiness" : 0, 
+                "education" : -7, 
+                "health" : 0, 
+                "energy" : 10,
+                "day" : 0,
+                "time_hour": 1,
+                "time_minute" : 20,
                 "sem" : 2
             }
     },
     {
         "Eating sweets" :
             {
-                "food" : -10, 
-                "money" : 0, 
-                "happiness" : 15, 
-                "education" : -2, 
-                "health" : 2, 
-                "energy" : -10,
-                "day" : 123,
-                "time_hour": 15,
-                "time_minute" : 22,
+                "food" : 7, 
+                "money" : -1, 
+                "happiness" : 7, 
+                "education" : 0, 
+                "health" : -1, 
+                "energy" : 7,
+                "day" : 0,
+                "time_hour": 0,
+                "time_minute" : 5,
                 "sem" : 2
             }
     },
     {
         "Drinking an energy drink" :
             {
-                "food" : -10, 
-                "money" : 0, 
-                "happiness" : 15, 
-                "education" : -2, 
-                "health" : 2, 
-                "energy" : -10,
-                "day" : 123,
-                "time_hour": 15,
-                "time_minute" : 22,
-                "sem" : 1
+                "food" : -3, 
+                "money" : -2, 
+                "happiness" : 5, 
+                "education" : 1, 
+                "health" : -3, 
+                "energy" : 19,
+                "day" : 0,
+                "time_hour": 0,
+                "time_minute" : 10,
+                "sem" : 2
             }
     }
 ]

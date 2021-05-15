@@ -4,74 +4,59 @@
             {
                 "food" : -10, 
                 "money" : 0, 
-                "happiness" : 15, 
-                "education" : -2, 
-                "health" : 2, 
+                "happiness" : 2, 
+                "education" : 0, 
+                "health" : 5, 
                 "energy" : -10,
-                "day" : 123,
-                "time_hour": 15,
-                "time_minute" : 22,
+                "day" : 0,
+                "time_hour": 1,
+                "time_minute" : 0,
                 "sem" : 1
             }
     },
     {
         "Go to PE" :
             {
-                "food" : -10, 
+                "food" : -13, 
                 "money" : 0, 
-                "happiness" : 15, 
-                "education" : -2, 
-                "health" : 2, 
-                "energy" : -10,
-                "day" : 123,
-                "time_hour": 15,
-                "time_minute" : 22,
-                "sem" : 1
-            }
-    },
-    {
-        "Join a gym" :
-            {
-                "food" : -10, 
-                "money" : 0, 
-                "happiness" : 15, 
-                "education" : -2, 
-                "health" : 2, 
-                "energy" : -10,
-                "day" : 123,
-                "time_hour": 15,
-                "time_minute" : 22,
+                "happiness" : 4, 
+                "education" : 1, 
+                "health" : 10, 
+                "energy" : -14,
+                "day" : 0,
+                "time_hour": 1,
+                "time_minute" : 30,
                 "sem" : 1
             }
     },
     {
         "Buy tablets" :
             {
-                "food" : -10, 
-                "money" : 0, 
-                "happiness" : 15, 
-                "education" : -2, 
-                "health" : 2, 
-                "energy" : -10,
-                "day" : 123,
-                "time_hour": 15,
-                "time_minute" : 22,
+                "food" : -8, 
+                "money" : -5, 
+                "happiness" : -2, 
+                "education" : 0, 
+                "health" : 15, 
+                "energy" : -3,
+                "day" : 0,
+                "time_hour": 0,
+                "time_minute" : 30,
                 "sem" : 1
             }
     },
     {
-        "Go to your personal doctor" :
+        "Join a gym" :
             {
-                "food" : -10, 
-                "money" : 0, 
-                "happiness" : 15, 
-                "education" : -2, 
-                "health" : 2, 
-                "energy" : -10,
-                "day" : 123,
-                "time_hour": 15,
-                "time_minute" : 22,
-                "sem" : 3
+                "food" : -20, 
+                "money" : -10, 
+                "happiness" : 7, 
+                "education" : 0, 
+                "health" : 18, 
+                "energy" : -17,
+                "day" : 0,
+                "time_hour": 2,
+                "time_minute" : 30,
+                "sem" : 2
             }
     },
     {
@@ -79,43 +64,58 @@
             {
                 "food" : -10, 
                 "money" : 0, 
-                "happiness" : 15, 
-                "education" : -2, 
-                "health" : 2, 
+                "happiness" : -3, 
+                "education" : 0, 
+                "health" : 25, 
                 "energy" : -10,
-                "day" : 123,
-                "time_hour": 15,
-                "time_minute" : 22,
+                "day" : 0,
+                "time_hour": 2,
+                "time_minute" : 30,
                 "sem" : 4
+            }
+    },
+    {
+        "Go to your personal doctor" :
+            {
+                "food" : -4, 
+                "money" : -50, 
+                "happiness" : 8, 
+                "education" : 0, 
+                "health" : 35, 
+                "energy" : -7,
+                "day" : 0,
+                "time_hour": 3,
+                "time_minute" : 0,
+                "sem" : 6
             }
     },
     {
         "Visit a private clinic" :
             {
-                "food" : -10, 
-                "money" : 0, 
-                "happiness" : 15, 
-                "education" : -2, 
-                "health" : 2, 
+                "food" : -5, 
+                "money" : -100, 
+                "happiness" : 9, 
+                "education" : 0, 
+                "health" : 45, 
                 "energy" : -10,
-                "day" : 123,
-                "time_hour": 15,
-                "time_minute" : 22,
+                "day" : 0,
+                "time_hour": 3,
+                "time_minute" : 30,
                 "sem" : 6
             }
     },
     {
         "Getting treatment in Israel" :
             {
-                "food" : -10, 
-                "money" : 0, 
-                "happiness" : 15, 
-                "education" : -2, 
-                "health" : 2, 
-                "energy" : -10,
-                "day" : 123,
-                "time_hour": 15,
-                "time_minute" : 22,
+                "food" : 0, 
+                "money" : -1000, 
+                "happiness" : 10, 
+                "education" : 0, 
+                "health" : 90, 
+                "energy" : 0,
+                "day" : 7,
+                "time_hour": 0,
+                "time_minute" : 0,
                 "sem" : 7
             }
     }

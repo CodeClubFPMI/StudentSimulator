@@ -2,6 +2,7 @@
 #include "settings.h"
 
 #include <QTimer>
+#include <QPalette>
 #include <QDebug>
 #include <QFile>
 #include "Game/foodmenu.h"
