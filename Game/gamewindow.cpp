@@ -1,13 +1,14 @@
 #include "gamewindow.h"
 #include "student.h"
 #include "foodmenu.h"
-
-#include "Utilities/utilities.h"
+#include "MainMenu/mainwindow.h"
+#include <QDebug>
 GameWindow::GameWindow(Game game_config, QWidget *parent) : QWidget(parent), main_layout_(this),
      stacked_widget_(this), buff_buttons_layout_(this){
 
     //load widget with parametrs of student
     parametrs_widget_ = new Parametrs;
+
 
     //get style sheets for buttons
     QFile file(":/Styles/MainMenuStyles.css");
@@ -15,6 +16,8 @@ GameWindow::GameWindow(Game game_config, QWidget *parent) : QWidget(parent), mai
     stacked_widget_.setStyleSheet(file.readAll());
 
     //upload all widgets which connects with action buttons
+    void_widget_ = new QWidget;
+    stacked_widget_.addWidget(void_widget_);
     health_menu_ = new HealthMenu;
     stacked_widget_.addWidget(health_menu_);
     energy_menu_ = new EnergyMenu;
@@ -60,6 +63,13 @@ GameWindow::GameWindow(Game game_config, QWidget *parent) : QWidget(parent), mai
     // add game mode choosing
     student_ = new Student(game_config);
 
+    //create timer for update game time
+    timer_ = new QTimer;
+    timer_->setInterval(1000);
+    connect(timer_, SIGNAL(timeout()), this, SLOT(add_minute()));
+    timer_->start();
+
+
     data_update::refresh_parameters_on_window(parametrs_widget_, student_);
     menu_buttons::make_buttons_enable(education_menu_->buttons_, student_);
     menu_buttons::make_buttons_enable(energy_menu_->buttons_, student_);
@@ -67,10 +77,18 @@ GameWindow::GameWindow(Game game_config, QWidget *parent) : QWidget(parent), mai
     menu_buttons::make_buttons_enable(happiness_menu_->buttons_, student_);
     menu_buttons::make_buttons_enable(health_menu_->buttons_, student_);
     menu_buttons::make_buttons_enable(money_menu_->buttons_, student_);
+
+    //create esc_menu
+    esc_menu_ = new EscMenu;
+
+    connect(esc_menu_->but_save_game_, SIGNAL(clicked()), this, SLOT(save_game()));
+    connect(esc_menu_->but_back_to_menu_, SIGNAL(clicked()), this, SLOT(back_to_menu_and_save()));
+    connect(esc_menu_->but_exit_, SIGNAL(clicked()), this, SLOT(exit_and_save()));
 }
 
 void GameWindow::change_index(int i) {
-    stacked_widget_.setCurrentIndex(i);
+    stacked_widget_.setCurrentIndex(i+1);
+
 }
 
 void GameWindow::change_education_parametrs(int i) {
@@ -151,6 +169,37 @@ void GameWindow::change_money_parametrs(int i) {
     data_update::refresh_parameters_on_window(parametrs_widget_, student_);
 }
 
+void GameWindow::add_minute(){
+    student_->change_minute_value(1);
+    data_update::refresh_parameters_on_window(parametrs_widget_, student_);
+}
+
 Student* GameWindow::get_student_ptr(){
     return student_;
+}
+
+void GameWindow::keyPressEvent(QKeyEvent *event){
+   // int key = event->key();
+    if (event->key() == Qt::Key_Escape) {
+        esc_menu_->setHidden(!(esc_menu_->isHidden()));
+    }
+}
+
+void GameWindow::save_game(){
+    SaveGame save;
+    save.save_game_to_JSON(student_);
+}
+
+void GameWindow::back_to_menu_and_save(){
+    SaveGame save;
+    save.save_game_to_JSON(student_);
+    esc_menu_->close();
+    dynamic_cast<MainWindow *>(this->parentWidget())->stacked_widget_.setCurrentIndex(0);
+}
+
+void GameWindow::exit_and_save(){
+    SaveGame save;
+    save.save_game_to_JSON(student_);
+    esc_menu_->close();
+    dynamic_cast<MainWindow *>(this->parentWidget())->close();
 }

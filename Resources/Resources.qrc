@@ -4,4 +4,7 @@
         <file>MainMenuStyles.css</file>
     </qresource>
     <qresource prefix="/Images"/>
+    <qresource prefix="/images">
+        <file>background1.png</file>
+    </qresource>
 </RCC>

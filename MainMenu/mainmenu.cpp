@@ -32,4 +32,6 @@ MainMenu::MainMenu(QWidget *parent) : QWidget(parent), layout_(this)
     connect(but_settings_, &QPushButton::clicked, this, &MainMenu::GoToSettings);
     connect(but_statistic_, &QPushButton::clicked, this, &MainMenu::GoToStatistic);
     connect(but_load_game_, &QPushButton::clicked, this, &MainMenu::GoToLoadGame);
+
+
 }

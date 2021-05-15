@@ -1,13 +1,9 @@
 {
-    "education": 0,
+    "education": 55,
     "energy": 0,
-    "food": 0,
-    "happiness": 0,
+    "food": 100,
+    "happiness": 93,
     "health": 0,
-    "money": 0,
-    "sem": 2,
-    "day" : 123,
-    "time_hour": 15,
-    "time_minute": 22,
-    "user_name": "Player"
+    "money": 8.800000000000011,
+    "sem": 2
 }
