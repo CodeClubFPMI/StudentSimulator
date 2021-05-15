@@ -13,7 +13,6 @@ MainWindow::MainWindow(QWidget *parent)
     main_menu_ = new MainMenu;
     settings_ = new Settings;
     statistic_ = new Statistic;
-   // game_window_ = new GameWindow(Game::LOAD_GAME);
 
     resize(800, 1000);
 
@@ -21,7 +20,7 @@ MainWindow::MainWindow(QWidget *parent)
     QPixmap bkgnd1(":/images/background1.png");
     bkgnd1 = bkgnd1.scaled(size(), Qt::IgnoreAspectRatio);
     QPalette p = palette(); //copy current, not create new
-    p.setBrush(QPalette::Background, bkgnd1);
+    p.setBrush(QPalette::Window, bkgnd1);
     setPalette(p);
 
 
