@@ -7,8 +7,9 @@
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonParseError>
-
 #include <QVBoxLayout>
+
+const int kDaysInSemestr = 120;
 
 void menu_buttons::make_buttons(const QString &file_name, QVector<Button *> &buttons, QVBoxLayout &layout){
     JSONParser parser;
@@ -57,7 +58,7 @@ void data_update::refresh_parameters_on_window(QWidget * widget, Student * stude
 void data_update::make_statistic(Student * student){
     JSONParser parser;
     QVector<QPair<int, QString>> statistic = parser.statistic_from_json();
-    statistic.push_back(QPair<int, QString>((student->get_sem_value() - 1)*120 + student->get_day(),
+    statistic.push_back(QPair<int, QString>((student->get_sem_value() - 1)*kDaysInSemestr + student->get_day(),
                                             student->get_name()));
     parser.statistic_to_json(statistic);
 }
