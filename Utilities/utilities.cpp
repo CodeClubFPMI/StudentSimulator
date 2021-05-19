@@ -2,6 +2,11 @@
 #include "button.h"
 #include "JSONparser.h"
 #include "Game/parametrs.h"
+#include <QFile>
+#include <QJsonObject>
+#include <QJsonArray>
+#include <QJsonDocument>
+#include <QJsonParseError>
 
 #include <QVBoxLayout>
 
@@ -47,4 +52,12 @@ void data_update::refresh_parameters_on_window(QWidget * widget, Student * stude
     dynamic_cast<Parametrs *>(widget)->setTimeCurrentValue(student->get_time());
     dynamic_cast<Parametrs *>(widget)->setSemestrCurrentValue(student->get_sem_value());
     dynamic_cast<Parametrs *>(widget)->setDayCurrentValue(student->get_day());
+}
+
+void data_update::make_statistic(Student * student){
+    JSONParser parser;
+    QVector<QPair<int, QString>> statistic = parser.statistic_from_json();
+    statistic.push_back(QPair<int, QString>((student->get_sem_value() - 1)*120 + student->get_day(),
+                                            student->get_name()));
+    parser.statistic_to_json(statistic);
 }

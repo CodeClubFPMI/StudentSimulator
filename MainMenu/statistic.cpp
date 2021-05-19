@@ -3,26 +3,13 @@
 #include <QLabel>
 #include <QFile>
 #include <QPushButton>
+#include <QMultiMap>
 #include "statistic.h"
+#include "Utilities/JSONparser.h"
 
 Statistic::Statistic(QWidget *parent) : QWidget(parent), layout_(this)
 {
-    QString file_path =  PRO_FILE_PWD;
-    file_path += + "Data//statistic.json";
-    QFile file(file_path);
-    const int kAmountOfPlaces = 10;
-    QLabel *labels_[kAmountOfPlaces + 1];
     QPushButton * but_back_ = new QPushButton("Back", this);
-
-    //    if ((file.exists())&&(file.open(QIODevice::ReadOnly))){
-    //        QString str="";
-    //        while(!file.atEnd())
-    //        {
-    //           str=str+file.readLine();
-    //        }
-    //        file.close();
-    //        qDebug() << str;
-    //    }
 
     //Creating main upper label
     QString str = "Best players";
@@ -37,13 +24,14 @@ Statistic::Statistic(QWidget *parent) : QWidget(parent), layout_(this)
     labels_[0]->setFont(font);
     layout_.addWidget(labels_[0], 2);
 
-    for (int i = 1; i < kAmountOfPlaces+1; ++i){
-      labels_[i] = new QLabel;
-      labels_[i]->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-      labels_[i]->setText(str);
-      labels_[i]->setAlignment(Qt::AlignHCenter);
-      layout_.addWidget(labels_[i], 1);
+    for (int i = 0; i < 10; ++i){
+      labels_[i + 1] = new QLabel;
+      labels_[i + 1]->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+      labels_[i + 1]->setAlignment(Qt::AlignHCenter);
+      layout_.addWidget(labels_[i + 1], 1);
     }
+    refresh_statistic();
+
     layout_.addWidget(but_back_, 1);
     layout_.setSpacing(40);
     layout_.setContentsMargins(250, 20, 250, 100);
@@ -51,4 +39,12 @@ Statistic::Statistic(QWidget *parent) : QWidget(parent), layout_(this)
     setLayout(&layout_);
 
     connect(but_back_, &QPushButton::clicked, this, &Statistic::GoToMainMenu);
+}
+
+void Statistic::refresh_statistic(){
+    JSONParser parser;
+    QVector<QPair<int, QString>> statistic = parser.statistic_from_json();
+    for (int i = 0; i < statistic.size(); ++i){
+      labels_[i + 1]->setText(statistic[i].second + " : " + QString::number(statistic[i].first));
+    }
 }

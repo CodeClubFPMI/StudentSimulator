@@ -63,7 +63,6 @@ void Student::set_student_config(const QString &file_name){
     time_.setHMS(configs.value("time_hour").toInt(),
                  configs.value("time_minute").toInt(), 0, 0);
     name_ = configs.value("name").toString();
-    //time_.
 }
 
 // for changing properties except for money_
