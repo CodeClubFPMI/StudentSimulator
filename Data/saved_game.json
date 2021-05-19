@@ -1,13 +1,13 @@
 {
-    "day": 1,
+    "day": 10,
     "education": 10,
-    "energy": 100,
-    "food": 80,
+    "energy": 86,
+    "food": 45,
     "happiness": 100,
     "health": 90,
-    "money": 183.5,
-    "name": "dima",
+    "money": 2,
+    "name": "cookold",
     "sem": 1,
-    "time_hour": 14,
-    "time_minute": 5
+    "time_hour": 20,
+    "time_minute": 29
 }

@@ -6,6 +6,9 @@
 #include "student.h"
 #include "Utilities/JSONparser.h"
 
+const int kDaysInSemestr = 120;
+const int kNeededEducation = 85;
+
 Student::Student(Game game)
 {
     QString file_name;
@@ -140,21 +143,31 @@ void Student::change_education_value_(int increase_arg){
 }
 void Student::change_money_value_(qreal increase_arg){
     money_ += increase_arg;
+    if (money_ < 0) {
+        money_ = 0;
+    }
 }
 
 void Student::change_day_value_(int day){
     day_ += day;
+    if (day_ >= kDaysInSemestr) {
+        day_ = 1;
+        ++sem_;
+        if (education_ < kNeededEducation){
+            emit death_of_student("You have been expelled.");
+        }
+    }
 }
 
 void Student::change_hour_value_(int hour){
     if(time_.hour() + hour >= 24){
-        ++day_;
+        change_day_value_(1);
     }
     time_ = time_.addSecs(hour * 60 * 60);
 }
 void Student::change_minute_value(int minute){
     if(time_.hour() * 60 + time_.minute() + minute >= 1440){
-        ++day_;
+        change_day_value_(1);
     }
     time_ = time_.addSecs(minute * 60);
 }

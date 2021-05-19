@@ -3,6 +3,10 @@
 #include "foodmenu.h"
 #include "MainMenu/mainwindow.h"
 #include <QDebug>
+
+const int kDecreaseParam = -1;
+const int kFrequencyParam = 5;
+
 GameWindow::GameWindow(Game game_config, QWidget *parent) : QWidget(parent), main_layout_(this),
      stacked_widget_(this), buff_buttons_layout_(this){
 
@@ -94,6 +98,7 @@ void GameWindow::change_index(int i) {
 }
 
 void GameWindow::change_education_parametrs(int i) {
+    if (student_->get_money_value() + education_menu_->buttons_[i]->get_money_changes() >= 0){
     student_->change_education_value_( education_menu_->buttons_[i]->get_education_changes());
     student_->change_energy_value_(education_menu_->buttons_[i]->get_energy_changes());
     student_->change_happiness_value_(education_menu_->buttons_[i]->get_happiness_changes());
@@ -104,9 +109,18 @@ void GameWindow::change_education_parametrs(int i) {
     student_->change_hour_value_(education_menu_->buttons_[i]->get_hour_changes());
     student_->change_minute_value(education_menu_->buttons_[i]->get_minute_changes());
     data_update::refresh_parameters_on_window(parametrs_widget_, student_);
+    } else {
+        QMessageBox *not_enough_money_notification = new QMessageBox;
+        not_enough_money_notification->setText("Not enough money!");
+        QPixmap no_money_pix;
+        no_money_pix.load("D:/no_money.jpg");
+        not_enough_money_notification->setIconPixmap(no_money_pix);
+        not_enough_money_notification->exec();
+    }
 }
 
 void GameWindow::change_energy_parametrs(int i) {
+    if (student_->get_money_value() + energy_menu_->buttons_[i]->get_money_changes() >= 0){
     student_->change_education_value_( energy_menu_->buttons_[i]->get_education_changes());
     student_->change_energy_value_(energy_menu_->buttons_[i]->get_energy_changes());
     student_->change_happiness_value_(energy_menu_->buttons_[i]->get_happiness_changes());
@@ -117,9 +131,18 @@ void GameWindow::change_energy_parametrs(int i) {
     student_->change_hour_value_(energy_menu_->buttons_[i]->get_hour_changes());
     student_->change_minute_value(energy_menu_->buttons_[i]->get_minute_changes());
     data_update::refresh_parameters_on_window(parametrs_widget_, student_);
+    } else {
+        QMessageBox *not_enough_money_notification = new QMessageBox;
+        not_enough_money_notification->setText("Not enough money!");
+        QPixmap no_money_pix;
+        no_money_pix.load("D:/no_money.jpg");
+        not_enough_money_notification->setIconPixmap(no_money_pix);
+        not_enough_money_notification->exec();
+    }
 }
 
 void GameWindow::change_food_parametrs(int i) {
+    if (student_->get_money_value() + food_menu_->buttons_[i]->get_money_changes() >= 0){
     student_->change_education_value_( food_menu_->buttons_[i]->get_education_changes());
     student_->change_energy_value_(food_menu_->buttons_[i]->get_energy_changes());
     student_->change_happiness_value_(food_menu_->buttons_[i]->get_happiness_changes());
@@ -130,9 +153,18 @@ void GameWindow::change_food_parametrs(int i) {
     student_->change_hour_value_(food_menu_->buttons_[i]->get_hour_changes());
     student_->change_minute_value(food_menu_->buttons_[i]->get_minute_changes());
     data_update::refresh_parameters_on_window(parametrs_widget_, student_);
+    } else {
+        QMessageBox *not_enough_money_notification = new QMessageBox;
+        not_enough_money_notification->setText("Not enough money!");
+        QPixmap no_money_pix;
+        no_money_pix.load("D:/no_money.jpg");
+        not_enough_money_notification->setIconPixmap(no_money_pix);
+        not_enough_money_notification->exec();
+    }
 }
 
 void GameWindow::change_happiness_parametrs(int i) {
+    if (student_->get_money_value() + happiness_menu_->buttons_[i]->get_money_changes() >= 0){
     student_->change_education_value_( happiness_menu_->buttons_[i]->get_education_changes());
     student_->change_energy_value_(happiness_menu_->buttons_[i]->get_energy_changes());
     student_->change_happiness_value_(happiness_menu_->buttons_[i]->get_happiness_changes());
@@ -143,9 +175,18 @@ void GameWindow::change_happiness_parametrs(int i) {
     student_->change_hour_value_(happiness_menu_->buttons_[i]->get_hour_changes());
     student_->change_minute_value(happiness_menu_->buttons_[i]->get_minute_changes());
     data_update::refresh_parameters_on_window(parametrs_widget_, student_);
+    } else {
+        QMessageBox *not_enough_money_notification = new QMessageBox;
+        not_enough_money_notification->setText("Not enough money!");
+        QPixmap no_money_pix;
+        no_money_pix.load("D:/no_money.jpg");
+        not_enough_money_notification->setIconPixmap(no_money_pix);
+        not_enough_money_notification->exec();
+    }
 }
 
 void GameWindow::change_health_parametrs(int i) {
+    if (student_->get_money_value() + health_menu_->buttons_[i]->get_money_changes() >= 0){
     student_->change_education_value_( health_menu_->buttons_[i]->get_education_changes());
     student_->change_energy_value_(health_menu_->buttons_[i]->get_energy_changes());
     student_->change_happiness_value_(health_menu_->buttons_[i]->get_happiness_changes());
@@ -156,6 +197,14 @@ void GameWindow::change_health_parametrs(int i) {
     student_->change_hour_value_(health_menu_->buttons_[i]->get_hour_changes());
     student_->change_minute_value(health_menu_->buttons_[i]->get_minute_changes());
     data_update::refresh_parameters_on_window(parametrs_widget_, student_);
+    } else {
+        QMessageBox *not_enough_money_notification = new QMessageBox;
+        not_enough_money_notification->setText("Not enough money!");
+        QPixmap no_money_pix;
+        no_money_pix.load("D:/no_money.jpg");
+        not_enough_money_notification->setIconPixmap(no_money_pix);
+        not_enough_money_notification->exec();
+    }
 }
 
 void GameWindow::change_money_parametrs(int i) {
@@ -172,8 +221,15 @@ void GameWindow::change_money_parametrs(int i) {
 }
 
 void GameWindow::add_minute(){
-    student_->change_minute_value(1);
-    qDebug() << student_->get_time();
+    student_->change_minute_value(-kDecreaseParam);
+    student_->change_education_value_(kDecreaseParam);
+
+    if (!(student_->get_time().minute() % kFrequencyParam)){
+        student_->change_energy_value_(kDecreaseParam);
+        student_->change_food_value_(kDecreaseParam);
+        student_->change_happiness_value_(kDecreaseParam);
+        student_->change_health_value_(kDecreaseParam);
+    }
     data_update::refresh_parameters_on_window(parametrs_widget_, student_);
 }
 
@@ -214,8 +270,11 @@ void GameWindow::student_death(QString cause_of_death){
     QPixmap message_pix;
     message_pix.load(":/images/razmysel.jpg");
     death_notification->setIconPixmap(message_pix);
-    death_notification->open();
+    death_notification->exec();
+
     timer_->stop();
+    data_update::make_statistic(student_);
     dynamic_cast<MainWindow *>(this->parentWidget())->stacked_widget_.setCurrentIndex(0);
     dynamic_cast<MainWindow *>(this->parentWidget())->stacked_widget_.removeWidget(this);
+    dynamic_cast<MainWindow *>(this->parentWidget())->statistic_->refresh_statistic();
 }
