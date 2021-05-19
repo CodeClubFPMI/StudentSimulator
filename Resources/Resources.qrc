@@ -6,5 +6,11 @@
     <qresource prefix="/Images"/>
     <qresource prefix="/images">
         <file>background1.png</file>
+        <file>cat1.jpg</file>
+        <file>cat2.jpg</file>
+        <file>cat3.jpg</file>
+        <file>cat4.jpg</file>
+        <file>background.png</file>
+        <file>razmysel.jpg</file>
     </qresource>
 </RCC>

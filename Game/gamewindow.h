@@ -10,6 +10,7 @@
 #include <QFile>
 #include <QDialog>
 #include <QTimer>
+#include <QMessageBox>
 #include <QPushButton>
 #include <QKeyEvent>
 #include "Game/parametrs.h"
@@ -44,6 +45,7 @@ public slots:
     void save_game();
     void back_to_menu_and_save();
     void exit_and_save();
+    void student_death(QString);
 
 
 private:
