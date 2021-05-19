@@ -21,6 +21,7 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     QStackedWidget stacked_widget_;
+    Statistic * statistic_;
 
 private:
     QPixmap bkgnd1;
@@ -34,7 +35,6 @@ private:
     GameWindow * game_window_;
     MainMenu * main_menu_;
     Settings * settings_;
-    Statistic * statistic_;
 
 };
 #endif // MAINWINDOW_H

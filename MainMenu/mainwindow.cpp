@@ -3,7 +3,10 @@
 
 #include <QTimer>
 #include <QDebug>
+#include <QScreen>
 #include <QFile>
+#include <QDesktopWidget>
+#include <QApplication>
 #include "Game/foodmenu.h"
 
 MainWindow::MainWindow(QWidget *parent)
@@ -14,7 +17,12 @@ MainWindow::MainWindow(QWidget *parent)
     settings_ = new Settings;
     statistic_ = new Statistic;
 
-    resize(800, 1000);
+    //get maximum height of window without task bar
+    QScreen *screen = QGuiApplication::primaryScreen();
+    QRect  screenGeometry = screen->geometry();
+    QDesktopWidget *mydesk = QApplication::desktop();
+    int height = 2*mydesk->availableGeometry().height() - screenGeometry.height();
+    resize(800, height);
 
     //set background
     bkgnd1.load(":/images/cat1.jpg");
