@@ -94,7 +94,7 @@ QVector<QPair<int, QString>> JSONParser::statistic_from_json(){
     QVector<QPair<int, QString>> statistic;
     QList<QString> names = statistic_qvariant.keys();
     for(int i = 0; i < statistic_qvariant.size(); ++i){
-        statistic.push_back(std::make_pair(statistic_qvariant[names[i]].toInt(),names[i]));
+        statistic.push_back(QPair<int, QString>(statistic_qvariant[names[i]].toInt(),names[i]));
     }
 
     sort_vector_pairs(statistic);

@@ -24,22 +24,13 @@ Statistic::Statistic(QWidget *parent) : QWidget(parent), layout_(this)
     labels_[0]->setFont(font);
     layout_.addWidget(labels_[0], 2);
 
-<<<<<<< HEAD
-    for (int i = 0; i < 10; ++i){
+
+    for (int i = 0; i < kAmountOfPlaces; ++i){
       labels_[i + 1] = new QLabel;
       labels_[i + 1]->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
       labels_[i + 1]->setAlignment(Qt::AlignCenter);
-      labels_[i]->setStyleSheet("QLabel { background-color : orange; color : black; border: 2px solid black; }");
+      labels_[i + 1]->setStyleSheet("QLabel { background-color : orange; color : black; border: 2px solid black; }");
       layout_.addWidget(labels_[i + 1], 1);
-=======
-    for (int i = 1; i < kAmountOfPlaces+1; ++i){
-      labels_[i] = new QLabel;
-      labels_[i]->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-      labels_[i]->setText(str);
-      labels_[i]->setAlignment(Qt::AlignCenter);
-      labels_[i]->setStyleSheet("QLabel { background-color : orange; color : black; border: 2px solid black; }");
-      layout_.addWidget(labels_[i], 1);
->>>>>>> starosta
     }
     refresh_statistic();
 
