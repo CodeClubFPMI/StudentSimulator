@@ -59,7 +59,6 @@ private:
    // this propertie can have more than or less 0
    qreal money_;
 
-   // TODO getter and setter
    // this propertie is for saving the term. The actions available to the user depend on this
    int sem_;
 

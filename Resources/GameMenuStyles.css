@@ -3,7 +3,7 @@ QLabel{
     color: black;
     font-size: 25px;
     font-weight: bold;
-/*    margin-left: auto;
+    /*margin-left: auto;
     margin-right: auto;*/
 }
 
@@ -12,8 +12,8 @@ QPushButton {
     background-color: beige;
     font-size: 25px;
     font-weight: bold;
-/*    margin-left: 0;
-    margin-right: 0;*/
+    /*margin-left: auto;
+    margin-right: auto;*/
 }
 
 QPushButton:hover {

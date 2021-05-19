@@ -71,7 +71,7 @@ int change_properties(int property, int changing_arg){
     int tmp = property + changing_arg;
     if(tmp > 100){
         tmp = 100;
-    } else if(tmp < 0){
+    } else if(tmp <= 0){
         tmp = 0;
     }
     return tmp;
@@ -113,16 +113,28 @@ QString Student::get_name(){
 
 void Student::change_food_value_(int increase_arg){
     food_ = change_properties(food_, increase_arg);
+    if (food_ == 0) {
+        emit death_of_student("You starved to death.");
+    }
 }
 
 void Student::change_energy_value_(int increase_arg){
     energy_ = change_properties(energy_, increase_arg);
+    if (energy_ == 0) {
+        emit death_of_student("You died of lack of sleep.");
+    }
 }
 void Student::change_health_value_(int increase_arg){
     health_ = change_properties(health_, increase_arg);
+    if (health_ == 0){
+        emit death_of_student("Your heart has stopped.");
+    }
 }
 void Student::change_happiness_value_(int increase_arg){
     happiness_ = change_properties(happiness_, increase_arg);
+    if (happiness_ == 0){
+        emit death_of_student("You died of depression.");
+    }
 }
 void Student::change_education_value_(int increase_arg){
     education_ = change_properties(education_, increase_arg);

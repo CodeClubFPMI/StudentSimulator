@@ -29,10 +29,10 @@ Statistic::Statistic(QWidget *parent) : QWidget(parent), layout_(this)
     labels_[0] = new QLabel;
     labels_[0]->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
     labels_[0]->setText(str);
-    labels_[0]->setStyleSheet("QLabel { background-color : gray; color : black; }");
-    labels_[0]->setAlignment(Qt::AlignHCenter);
+    labels_[0]->setStyleSheet("QLabel { background-color : gold; color : black; border: 3px solid black; }");
+    labels_[0]->setAlignment(Qt::AlignCenter);
     QFont font = labels_[0]->font();
-    font.setPointSize(15);
+    font.setPointSize(25);
     font.setBold(true);
     labels_[0]->setFont(font);
     layout_.addWidget(labels_[0], 2);
@@ -41,7 +41,8 @@ Statistic::Statistic(QWidget *parent) : QWidget(parent), layout_(this)
       labels_[i] = new QLabel;
       labels_[i]->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
       labels_[i]->setText(str);
-      labels_[i]->setAlignment(Qt::AlignHCenter);
+      labels_[i]->setAlignment(Qt::AlignCenter);
+      labels_[i]->setStyleSheet("QLabel { background-color : orange; color : black; border: 2px solid black; }");
       layout_.addWidget(labels_[i], 1);
     }
     layout_.addWidget(but_back_, 1);

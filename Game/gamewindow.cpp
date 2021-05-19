@@ -84,6 +84,8 @@ GameWindow::GameWindow(Game game_config, QWidget *parent) : QWidget(parent), mai
     connect(esc_menu_->but_save_game_, SIGNAL(clicked()), this, SLOT(save_game()));
     connect(esc_menu_->but_back_to_menu_, SIGNAL(clicked()), this, SLOT(back_to_menu_and_save()));
     connect(esc_menu_->but_exit_, SIGNAL(clicked()), this, SLOT(exit_and_save()));
+
+    connect(student_, &Student::death_of_student, this, &GameWindow::student_death);
 }
 
 void GameWindow::change_index(int i) {
@@ -171,6 +173,7 @@ void GameWindow::change_money_parametrs(int i) {
 
 void GameWindow::add_minute(){
     student_->change_minute_value(1);
+    qDebug() << student_->get_time();
     data_update::refresh_parameters_on_window(parametrs_widget_, student_);
 }
 
@@ -202,4 +205,17 @@ void GameWindow::exit_and_save(){
     save.save_game_to_JSON(student_);
     esc_menu_->close();
     dynamic_cast<MainWindow *>(this->parentWidget())->close();
+}
+
+void GameWindow::student_death(QString cause_of_death){
+    QMessageBox *death_notification = new QMessageBox;
+    death_notification->setText("You lose :c");
+    death_notification->setInformativeText(cause_of_death);
+    QPixmap message_pix;
+    message_pix.load(":/images/razmysel.jpg");
+    death_notification->setIconPixmap(message_pix);
+    death_notification->open();
+    timer_->stop();
+    dynamic_cast<MainWindow *>(this->parentWidget())->stacked_widget_.setCurrentIndex(0);
+    dynamic_cast<MainWindow *>(this->parentWidget())->stacked_widget_.removeWidget(this);
 }

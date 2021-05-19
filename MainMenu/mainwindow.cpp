@@ -2,7 +2,6 @@
 #include "settings.h"
 
 #include <QTimer>
-#include <QPalette>
 #include <QDebug>
 #include <QFile>
 #include "Game/foodmenu.h"
@@ -18,14 +17,31 @@ MainWindow::MainWindow(QWidget *parent)
     resize(800, 1000);
 
     //set background
-    QPixmap bkgnd1(":/images/background1.png");
+    bkgnd1.load(":/images/cat1.jpg");
     bkgnd1 = bkgnd1.scaled(size(), Qt::IgnoreAspectRatio);
-    QPalette p = palette(); //copy current, not create new
-    p.setBrush(QPalette::Window, bkgnd1);
+    p.setBrush(QPalette::Background, bkgnd1);
     setPalette(p);
 
+    bkgnd2.load(":/images/cat2.jpg");
+    bkgnd2 = bkgnd2.scaled(size(), Qt::IgnoreAspectRatio);
+
+    bkgnd3.load(":/images/cat3.jpg");
+    bkgnd3 = bkgnd3.scaled(size(), Qt::IgnoreAspectRatio);
+
+    bkgnd4.load(":/images/cat4.jpg");
+    bkgnd4 = bkgnd4.scaled(size(), Qt::IgnoreAspectRatio);
+
+    normal_bkgnd1.load(":/images/background1.png");
+    normal_bkgnd1 = normal_bkgnd1.scaled(size(), Qt::IgnoreAspectRatio);
+
+    normal_bkgnd2.load(":/images/background.png");
+    normal_bkgnd2 = normal_bkgnd2.scaled(size(), Qt::IgnoreAspectRatio);
 
 
+    QTimer * timer_ = new QTimer;
+    timer_->setInterval(250);
+    connect(timer_, SIGNAL(timeout()), this, SLOT(change_image()));
+    timer_->start();
 
     stacked_widget_.addWidget(main_menu_);
     //stacked_widget_.setCurrentIndex(2);
@@ -76,6 +92,12 @@ MainWindow::MainWindow(QWidget *parent)
     //choose settings menu
     connect(main_menu_, &MainMenu::GoToSettings, [&](){stacked_widget_.setCurrentIndex(2); } );
 
+    //delete game
+//    auto delete_game=[&](){
+//      stacked_widget_.removeWidget(game_window_);
+//      qDebug() << "asd";
+//    };
+//    connect(game_window_, &GameWindow::delete_game, delete_game);
 }
 
 
@@ -83,4 +105,34 @@ MainWindow::~MainWindow()
 {
 }
 
+void MainWindow::change_image(){
+       if (stacked_widget_.currentIndex() != 3) {
+        if (displayed_image_id_ == 0) {
+            p.setBrush(QPalette::Background, bkgnd2);
+            setPalette(p);
+        }
+        if (displayed_image_id_ == 1){
+            p.setBrush(QPalette::Background, bkgnd3);
+            setPalette(p);
+        }
+        if (displayed_image_id_ == 2){
+            p.setBrush(QPalette::Background, bkgnd4);
+            setPalette(p);
+        }
+        if (displayed_image_id_ == 3){
+            p.setBrush(QPalette::Background, bkgnd1);
+            setPalette(p);
+        }
+        displayed_image_id_ = (displayed_image_id_ + 1) % 4;
+    } else {
+        if (displayed_image_id_ % 20 >10) {
+           p.setBrush(QPalette::Background, normal_bkgnd1);
+           setPalette(p);
+        } else {
+            p.setBrush(QPalette::Background, normal_bkgnd2);
+            setPalette(p);
+        }
+        displayed_image_id_ = (displayed_image_id_ + 1) % 20;
+  }
+}
 
