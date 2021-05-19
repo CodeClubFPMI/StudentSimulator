@@ -19,7 +19,7 @@ MainWindow::MainWindow(QWidget *parent)
     //set background
     bkgnd1.load(":/images/cat1.jpg");
     bkgnd1 = bkgnd1.scaled(size(), Qt::IgnoreAspectRatio);
-    p.setBrush(QPalette::Background, bkgnd1);
+    p.setBrush(QPalette::Window, bkgnd1);
     setPalette(p);
 
     bkgnd2.load(":/images/cat2.jpg");
@@ -102,28 +102,28 @@ MainWindow::~MainWindow()
 void MainWindow::change_image(){
        if (stacked_widget_.currentIndex() != 3) {
         if (displayed_image_id_ == 0) {
-            p.setBrush(QPalette::Background, bkgnd2);
+            p.setBrush(QPalette::Window, bkgnd2);
             setPalette(p);
         }
         if (displayed_image_id_ == 1){
-            p.setBrush(QPalette::Background, bkgnd3);
+            p.setBrush(QPalette::Window, bkgnd3);
             setPalette(p);
         }
         if (displayed_image_id_ == 2){
-            p.setBrush(QPalette::Background, bkgnd4);
+            p.setBrush(QPalette::Window, bkgnd4);
             setPalette(p);
         }
         if (displayed_image_id_ == 3){
-            p.setBrush(QPalette::Background, bkgnd1);
+            p.setBrush(QPalette::Window, bkgnd1);
             setPalette(p);
         }
         displayed_image_id_ = (displayed_image_id_ + 1) % 4;
     } else {
         if (displayed_image_id_ % 20 >10) {
-           p.setBrush(QPalette::Background, normal_bkgnd1);
+           p.setBrush(QPalette::Window, normal_bkgnd1);
            setPalette(p);
         } else {
-            p.setBrush(QPalette::Background, normal_bkgnd2);
+            p.setBrush(QPalette::Window, normal_bkgnd2);
             setPalette(p);
         }
         displayed_image_id_ = (displayed_image_id_ + 1) % 20;
