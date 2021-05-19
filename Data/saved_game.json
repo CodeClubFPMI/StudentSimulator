@@ -1,13 +1,13 @@
 {
-    "day": 123,
-    "education": 55,
-    "energy": 0,
-    "food": 100,
-    "happiness": 93,
-    "health": 0,
-    "money": 0,
-    "name": "Player",
-    "sem": 2,
-    "time_hour": 15,
-    "time_minute": 28
+    "day": 1,
+    "education": 10,
+    "energy": 100,
+    "food": 80,
+    "happiness": 100,
+    "health": 90,
+    "money": 183.5,
+    "name": "dima",
+    "sem": 1,
+    "time_hour": 14,
+    "time_minute": 5
 }

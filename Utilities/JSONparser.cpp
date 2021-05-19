@@ -8,7 +8,10 @@
 #include <QJsonParseError>
 #include <QString>
 #include <QMap>
+#include <QMultiMap>
 #include <QVariant>
+
+void sort_vector_pairs(QVector<QPair<int, QString>>&);
 
 QVector<Button *> JSONParser::buttons_form_json(const QString &file_name){
     qDebug() << "parsing starts";
@@ -84,5 +87,47 @@ QMap<QString, QVariant> JSONParser::student_configs(const QString &file_name){
         return configs;
     }
     return QMap<QString, QVariant>();
+}
+
+QVector<QPair<int, QString>> JSONParser::statistic_from_json(){
+    QMap<QString, QVariant> statistic_qvariant = student_configs("statistic.json");
+    QVector<QPair<int, QString>> statistic;
+    QList<QString> names = statistic_qvariant.keys();
+    for(int i = 0; i < statistic_qvariant.size(); ++i){
+        statistic.push_back(std::make_pair(statistic_qvariant[names[i]].toInt(),names[i]));
+    }
+
+    sort_vector_pairs(statistic);
+    return statistic;
+}
+
+void JSONParser::statistic_to_json(QVector<QPair<int, QString>> & statistic){
+    sort_vector_pairs(statistic);
+    QJsonObject statistic_obj;
+    for(int i = 0; i < statistic.size() && i < 10; ++i){
+       statistic_obj.insert(statistic[i].second, QJsonValue::fromVariant(statistic[i].first));
+    }
+
+    QFile save_file;
+    QString file_path = PRO_FILE_PWD;
+    file_path += "//Data//";
+    file_path += "statistic.json";
+    save_file.setFileName(file_path);
+    if(save_file.open(QIODevice::WriteOnly)){
+        save_file.write(QJsonDocument(statistic_obj).toJson());
+    } else{
+        qDebug() << "Error with saving game!";
+    }
+    save_file.close();
+}
+
+void sort_vector_pairs(QVector<QPair<int, QString>>& v){
+    for(int i = 0; i < v.size() - 1; ++i){
+        for(int j = 0; j < v.size() - 1; ++j){
+            if(v[j].first < v[j + 1].first){
+                std::swap(v[j], v[j + 1]);
+            }
+        }
+    }
 }
 

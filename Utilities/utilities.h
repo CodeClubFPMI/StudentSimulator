@@ -28,6 +28,10 @@ namespace data_update {
     // this function will be called when properties of Student class are chenged and we need to
     // update parameters (with the Parametrs class) and show checnges (change them in the window)
     void refresh_parameters_on_window(QWidget *, Student *);
+
+    void refresh_statistic();
+
+    void make_statistic(Student *);
 }
 
 #endif // UTILITIES_H

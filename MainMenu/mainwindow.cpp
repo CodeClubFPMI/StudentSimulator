@@ -25,9 +25,6 @@ MainWindow::MainWindow(QWidget *parent)
     p.setBrush(QPalette::Window, bkgnd1);
     setPalette(p);
 
-
-
-
     stacked_widget_.addWidget(main_menu_);
     //stacked_widget_.setCurrentIndex(2);
     stacked_widget_.addWidget(statistic_);
@@ -83,5 +80,3 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow()
 {
 }
-
-
