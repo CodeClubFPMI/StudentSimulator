@@ -32,6 +32,8 @@ signals:
     // when one of the properties (except of money) drops to 0, student dies :(
     // TODO: mb swap QString for enum
     void death_of_student(QString cause_of_death);
+    void student_win();
+    void pass_session();
 
     // TODO connect them
 public slots:

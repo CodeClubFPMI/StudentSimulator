@@ -12,5 +12,13 @@
         <file>cat4.jpg</file>
         <file>background.png</file>
         <file>razmysel.jpg</file>
+        <file>no_money.jpg</file>
+        <file>hunger.jpg</file>
+        <file>sleep.jpg</file>
+        <file>heart.jpg</file>
+        <file>depression.jpg</file>
+        <file>session_passed.jpg</file>
+        <file>win.jpg</file>
     </qresource>
+    <qresource prefix="/"/>
 </RCC>

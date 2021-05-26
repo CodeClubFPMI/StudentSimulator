@@ -1,13 +1,13 @@
 {
-    "day": 3,
-    "education": 76,
-    "energy": 61,
-    "food": 91,
-    "happiness": 52,
-    "health": 27,
-    "money": 188.30000000000007,
-    "name": "dima",
+    "day": 1,
+    "education": 0,
+    "energy": 97,
+    "food": 77,
+    "happiness": 77,
+    "health": 87,
+    "money": 200,
+    "name": "фыв",
     "sem": 1,
-    "time_hour": 0,
-    "time_minute": 25
+    "time_hour": 9,
+    "time_minute": 16
 }

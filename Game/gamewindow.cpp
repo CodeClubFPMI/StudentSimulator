@@ -59,10 +59,6 @@ GameWindow::GameWindow(Game game_config, QWidget *parent) : QWidget(parent), mai
     main_layout_.addWidget(action_buttons_widget_, 1);
     setLayout(&main_layout_);
 
-    //---------------------------------
-    //education_menu_->buttons_[1]->get_button_ptr()->setEnabled(false);
-    //---------------------------------
-
     // student and menues
     // add game mode choosing
     student_ = new Student(game_config);
@@ -89,7 +85,22 @@ GameWindow::GameWindow(Game game_config, QWidget *parent) : QWidget(parent), mai
     connect(esc_menu_->but_back_to_menu_, SIGNAL(clicked()), this, SLOT(back_to_menu_and_save()));
     connect(esc_menu_->but_exit_, SIGNAL(clicked()), this, SLOT(exit_and_save()));
 
+
+
     connect(student_, &Student::death_of_student, this, &GameWindow::student_death);
+
+    auto session_pass=[&](){
+    QMessageBox *session_passed = new QMessageBox;
+    session_passed->setText("Congratulations! You passed session!");
+    QPixmap session;
+    session.load(":/images/session_passed.jpg");
+    session_passed->setIconPixmap(session);
+    session_passed->exec();
+    };
+
+    connect(student_, &Student::pass_session, session_pass);
+
+    connect(student_, &Student::student_win, this, &GameWindow::student_win);
 }
 
 void GameWindow::change_index(int i) {
@@ -113,7 +124,7 @@ void GameWindow::change_education_parametrs(int i) {
         QMessageBox *not_enough_money_notification = new QMessageBox;
         not_enough_money_notification->setText("Not enough money!");
         QPixmap no_money_pix;
-        no_money_pix.load("D:/no_money.jpg");
+        no_money_pix.load(":/images/no_money.jpg");
         not_enough_money_notification->setIconPixmap(no_money_pix);
         not_enough_money_notification->exec();
     }
@@ -135,7 +146,7 @@ void GameWindow::change_energy_parametrs(int i) {
         QMessageBox *not_enough_money_notification = new QMessageBox;
         not_enough_money_notification->setText("Not enough money!");
         QPixmap no_money_pix;
-        no_money_pix.load("D:/no_money.jpg");
+        no_money_pix.load(":/images/no_money.jpg");
         not_enough_money_notification->setIconPixmap(no_money_pix);
         not_enough_money_notification->exec();
     }
@@ -157,7 +168,7 @@ void GameWindow::change_food_parametrs(int i) {
         QMessageBox *not_enough_money_notification = new QMessageBox;
         not_enough_money_notification->setText("Not enough money!");
         QPixmap no_money_pix;
-        no_money_pix.load("D:/no_money.jpg");
+        no_money_pix.load(":/images/no_money.jpg");
         not_enough_money_notification->setIconPixmap(no_money_pix);
         not_enough_money_notification->exec();
     }
@@ -179,7 +190,7 @@ void GameWindow::change_happiness_parametrs(int i) {
         QMessageBox *not_enough_money_notification = new QMessageBox;
         not_enough_money_notification->setText("Not enough money!");
         QPixmap no_money_pix;
-        no_money_pix.load("D:/no_money.jpg");
+        no_money_pix.load(":/images/no_money.jpg");
         not_enough_money_notification->setIconPixmap(no_money_pix);
         not_enough_money_notification->exec();
     }
@@ -201,7 +212,7 @@ void GameWindow::change_health_parametrs(int i) {
         QMessageBox *not_enough_money_notification = new QMessageBox;
         not_enough_money_notification->setText("Not enough money!");
         QPixmap no_money_pix;
-        no_money_pix.load("D:/no_money.jpg");
+        no_money_pix.load(":/images/no_money.jpg");
         not_enough_money_notification->setIconPixmap(no_money_pix);
         not_enough_money_notification->exec();
     }
@@ -268,13 +279,41 @@ void GameWindow::student_death(QString cause_of_death){
     death_notification->setText("You lose :c");
     death_notification->setInformativeText(cause_of_death);
     QPixmap message_pix;
-    message_pix.load(":/images/razmysel.jpg");
+    data_update::refresh_parameters_on_window(parametrs_widget_, student_);
+    if (cause_of_death == "You starved to death."){
+        message_pix.load(":/images/hunger.jpg");
+    }
+    if (cause_of_death == "You died of lack of sleep."){
+        message_pix.load(":/images/sleep.jpg");
+    }
+    if (cause_of_death == "Your heart has stopped."){
+        message_pix.load(":/images/heart.jpg");
+    }
+    if(cause_of_death == "You died of depression."){
+        message_pix.load(":/images/depression.jpg");
+    }
+    if (cause_of_death == "You have been expelled."){
+        message_pix.load(":/images/razmysel.jpg");
+    }
+    timer_->stop();
     death_notification->setIconPixmap(message_pix);
     death_notification->exec();
-
-    timer_->stop();
     data_update::make_statistic(student_);
     dynamic_cast<MainWindow *>(this->parentWidget())->stacked_widget_.setCurrentIndex(0);
-    dynamic_cast<MainWindow *>(this->parentWidget())->stacked_widget_.removeWidget(this);
     dynamic_cast<MainWindow *>(this->parentWidget())->statistic_->refresh_statistic();
+    dynamic_cast<MainWindow *>(this->parentWidget())->stacked_widget_.removeWidget(this);
+}
+
+void GameWindow::student_win(){
+    QMessageBox *end_game = new QMessageBox;
+    end_game->setText("Congratulations! You win!");
+    QPixmap end_game_pix;
+    end_game_pix.load(":/images/win.jpg");
+    end_game->setIconPixmap(end_game_pix);
+    timer_->stop();
+    end_game->exec();
+    data_update::make_statistic(student_);
+    dynamic_cast<MainWindow *>(this->parentWidget())->stacked_widget_.setCurrentIndex(0);
+    dynamic_cast<MainWindow *>(this->parentWidget())->statistic_->refresh_statistic();
+    dynamic_cast<MainWindow *>(this->parentWidget())->stacked_widget_.removeWidget(this);
 }

@@ -50,3 +50,4 @@ void Statistic::refresh_statistic(){
       labels_[i + 1]->setText(statistic[i].second + " : " + QString::number(statistic[i].first));
     }
 }
+

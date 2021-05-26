@@ -8,6 +8,7 @@
 
 const int kDaysInSemestr = 120;
 const int kNeededEducation = 85;
+const int kLastSemestr = 8;
 
 Student::Student(Game game)
 {
@@ -153,9 +154,17 @@ void Student::change_day_value_(int day){
     if (day_ >= kDaysInSemestr) {
         day_ = 1;
         ++sem_;
+        //is session passed
         if (education_ < kNeededEducation){
             emit death_of_student("You have been expelled.");
+        } else {
+            if (sem_ > kLastSemestr){
+                emit student_win();
+            } else {
+                emit pass_session();
+            }
         }
+
     }
 }
 

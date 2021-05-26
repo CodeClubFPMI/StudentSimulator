@@ -46,6 +46,7 @@ public slots:
     void back_to_menu_and_save();
     void exit_and_save();
     void student_death(QString);
+    void student_win();
 
 
 private:
